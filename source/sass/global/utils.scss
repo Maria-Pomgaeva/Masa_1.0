@@ -18,7 +18,7 @@
 }
 
 .rouble {
-  font-family: $ff-rouble;
+  font-family: $ff-manrope;
   /* stylelint-disable */
   text-transform: lowercase !important;
   font-weight: 400 !important;
@@ -40,6 +40,13 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .scroll-lock-ios {

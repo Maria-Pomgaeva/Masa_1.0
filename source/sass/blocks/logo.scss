@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+
+  background-color: $color-default-white;
+  border-radius: 50%;
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+
+  &:not([disabled]),
+  &:not(&--disabled) {
+    @include hover-focus {
+      opacity: 0.6;
+    }
+
+    @include active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.logo svg {
+  width: 100%;
+}

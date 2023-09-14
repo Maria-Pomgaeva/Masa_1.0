@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Глобальный профессиональный опыт обучения за рубежом">
+    <title>Masa</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32x32.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="preload" href="fonts/Manrope-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header>
+        <div class="header__container container">
+          <div class="header__wrapper">
+            <a class="header__logo logo">
+              <svg width="28" height="28" role="img" aria-hidden="true" aria-label="Логотип Masa" focusable="false">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button class="header__toggle btn" type="button" aria-label="Открыть / Закрыть меню" aria-pressed="false" data-burger>Меню
+              <span class="header__toggle-range btn__icon">
+                <span class="header__toggle-icon"></span>
+              </span>
+            </button>
+            <nav class="header__nav nav">
+              <div class="nav__inner">
+                <div class="nav__wrapper">
+                  <div class="nav__overlay" data-overlay></div>
+                  <ul class="nav__menu list-reset" data-accordion="parent">
+                    <li class="nav__item">
+                      <a class="nav__link" href="#about" data-menu-link>О проекте</a>
+                    </li>
+                    <li class="nav__item" data-accordion="element">
+                      <button class="nav__link-button" type="button" data-accordion="button">
+                        <span>Программы</span>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="#arrow-down"></use>
+                        </svg>
+                      </button>
+                      <div class="nav__drop-container" data-accordion="content">
+                        <ul class="nav__drop-list list-reset">
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#" data-menu-link>Стажировки</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#" data-menu-link>Волонтёрство</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#" data-menu-link>Учеба</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#" data-menu-link>Религия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#about" data-menu-link>Как поехать</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#about" data-menu-link>Отзывы</a>
+                    </li>
+                    <li class="nav__item" data-accordion="element">
+                      <button class="nav__link-button" type="button" data-accordion="button">
+                        <span>Новости</span>
+                        <svg width="12" height="12" aria-hidden="true">
+                          <use xlink:href="#arrow-down"></use>
+                        </svg>
+                      </button>
+                      <div class="nav__drop-container" data-accordion="content">
+                        <ul class="nav__drop-list">
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#">Общее</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#">Волонтёрство</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#">Стажировки</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#">Карьера</a>
+                          </li>
+                          <li class="nav__drop-item">
+                            <a class="nav__drop-link" href="#">Путешествия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="#about" data-menu-link>Контакты</a>
+                    </li>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <h1 class="visually-hidden">Глобальный профессиональный опыт обучения за рубежом</h1>
+        <section class="promo">
+          <div class="promo__container-image">
+            <div class="promo__swiper-image swiper">
+              <div class="promo__wrapper-image swiper-wrapper">
+                <div class="promo__slide-image swiper-slide">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="img/promo/mobile-photo-one.webp 1x, img/promo/mobile-photo-one@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/promo/mobile-photo-one.jpg 1x, img/promo/mobile-photo-one@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/promo/tablet-photo-one.webp 1x, img/promo/tablet-photo-one@2x.webp 2x">
+                    <source media="(max-width: 1199px)" srcset="img/promo/tablet-photo-one.jpg 1x, img/promo/tablet-photo-one@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/promo/desktop-photo-one.webp 1x, img/promo/desktop-photo-one@2x.webp 2x">
+                    <img src="img/promo/desktop-photo-one.jpg" srcset="img/promo/desktop-photo-one@2x.jpg" width="1440" height="800" alt="Молодые специалисты">
+                  </picture>
+                </div>
+                <div class="promo__slide-image swiper-slide">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="img/promo/mobile-photo-two.webp 1x, img/promo/mobile-photo-two@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/promo/mobile-photo-two.jpg 1x, img/promo/mobile-photo-two@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/promo/tablet-photo-two.webp 1x, img/promo/tablet-photo-two@2x.webp 2x">
+                    <source media="(max-width: 1199px)" srcset="img/promo/tablet-photo-two.jpg 1x, img/promo/tablet-photo-two@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/promo/desktop-photo-two.webp 1x, img/promo/desktop-photo-two@2x.webp 2x">
+                    <img src="img/promo/desktop-photo-two.jpg" srcset="img/promo/desktop-photo-two@2x.jpg" width="1440" height="800" alt="Молодые специалисты">
+                  </picture>
+                </div>
+                <div class="promo__slide-image swiper-slide">
+                  <picture>
+                    <source media="(max-width: 767px)" type="image/webp" srcset="img/promo/mobile-photo-three.webp 1x, img/promo/mobile-photo-three@2x.webp 2x">
+                    <source media="(max-width: 767px)" srcset="img/promo/mobile-photo-three.jpg 1x, img/promo/mobile-photo-three@2x.jpg 2x">
+                    <source media="(max-width: 1199px)" type="image/webp" srcset="img/promo/tablet-photo-three.webp 1x, img/promo/tablet-photo-three@2x.webp 2x">
+                    <source media="(max-width: 1199px)" srcset="img/promo/tablet-photo-three.jpg 1x, img/promo/tablet-photo-three@2x.jpg 2x">
+                    <source type="image/webp" srcset="img/promo/desktop-photo-three.webp 1x, img/promo/desktop-photo-three@2x.webp 2x">
+                    <img src="img/promo/desktop-photo-three.jpg" srcset="img/promo/desktop-photo-three@2x.jpg" width="1440" height="800" alt="Молодые специалисты">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="promo__container-content container">
+            <div class="promo__swiper-content swiper">
+              <div class="promo__pagination swiper-pagination"></div>
+              <div class="promo__wrapper-content swiper-wrapper">
+                <div class="promo__slide-content swiper-slide">
+                  <div class="promo__content">
+                    <div class="promo__text-header">
+                      <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+                    </div>
+                    <div class="promo__text-bottom">
+                      <div class="promo__text-content">
+                        <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                      </div>
+                      <div class="promo__text-button">
+                        <a class="promo__button btn btn--dark" href="#">Подробнее
+                          <span class="btn__icon">
+                            <svg width="8" height="8" aria-hidden="true">
+                              <use xlink:href="#arrow-down"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="promo__slide-content swiper-slide">
+                  <div class="promo__content">
+                    <div class="promo__text-header">
+                      <h2>Волонтёрские программы &mdash; внесите свой вклад в&nbsp;общество</h2>
+                    </div>
+                    <div class="promo__text-bottom">
+                      <div class="promo__text-content">
+                        <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
+                      </div>
+                      <div class="promo__text-button">
+                        <a class="promo__button btn btn--dark" href="#">Подробнее
+                          <span class="btn__icon">
+                            <svg width="8" height="8" aria-hidden="true">
+                              <use xlink:href="#arrow-down"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="promo__slide-content swiper-slide">
+                  <div class="promo__content">
+                    <div class="promo__text-header">
+                      <h2>Глобальный профессиональный<br>опыт обучения за рубежом</h2>
+                    </div>
+                    <div class="promo__text-bottom">
+                      <div class="promo__text-content">
+                        <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
+                      </div>
+                      <div class="promo__text-button">
+                        <a class="promo__button btn btn--dark" href="#">Подробнее
+                          <span class="btn__icon">
+                            <svg width="8" height="8" aria-hidden="true">
+                              <use xlink:href="#arrow-down"></use>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container"></div>
+      </footer>
+    </div>
+
+    <!-- Модалка -->
+<!-- <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
+    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
