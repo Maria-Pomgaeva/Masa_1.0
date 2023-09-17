@@ -4,6 +4,7 @@ import {menuOpen} from './modules/menu-open';
 import {initAccordions} from './modules/accordions/init-accordion';
 import {initSwiper} from './modules/swiper';
 import {Form} from './modules/form-validate/form';
+import {CustomSelect} from './modules/select/custom-select';
 
 // ---------------------------------
 
@@ -27,6 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const select = new CustomSelect();
+    select.init();
   });
 });
 

@@ -1,0 +1,114 @@
+.custom-input,
+.custom-textarea {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+
+  & label {
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-charcoal;
+    opacity: 0.8;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      line-height: 14px;
+    }
+  }
+
+  & input,
+  & textarea {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px 25px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $color-transparent;
+    border: 1px solid rgba($color-charcoal, 0.3);
+    border-radius: 8px;
+    outline: none;
+
+    transition: border 0.3s ease;
+
+    @media screen and (max-width: 767px) {
+      max-width: unset;
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:disabled {
+      background-color: rgba(#ffffff, 0.2);
+      border-color: #ffffff;
+      opacity: 0.4;
+
+      pointer-events: none;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+
+    color: #ff5e66;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    @media screen and (max-width: 767px) {
+      bottom: 20px;
+    }
+  }
+
+  &.is-invalid {
+    input,
+    textarea {
+      border: 1px solid #ff5e66;
+      background: rgba(255, 94, 102, 0.20);
+
+      &:focus,
+      &:hover {
+        border: 1px solid rgba(#ff5e66, 0.5);
+      }
+    }
+  }
+
+  &.is-valid {
+    input {
+      border: 2px solid #22b259;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba(#22b259, 0.5);
+      }
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+
+    &.is-invalid {
+      color: #ff5e66;
+    }
+
+    &.is-valid {
+      color: #15ab07;
+    }
+  }
+}

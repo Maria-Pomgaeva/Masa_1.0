@@ -16,6 +16,11 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
 
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
   &:disabled {
     border-color: $color-disabled;
     color: $color-disabled;
@@ -30,6 +35,10 @@
   transform: translateY(-50%);
   right: 3px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -41,8 +50,8 @@
 }
 
 .btn--dark .btn__icon {
-  color: $color-cerulean-blue;
-  background-color: $color-default-white;
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
 }
 
 .btn--light {
@@ -51,6 +60,6 @@
 }
 
 .btn--light .btn__icon {
-  color: $color-default-white;
-  background-color: $color-cerulean-blue;
+  color: $color-cerulean-blue;
+  background-color: $color-default-white;
 }

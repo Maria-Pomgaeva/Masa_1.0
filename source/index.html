@@ -162,7 +162,7 @@
                         <a class="promo__button btn btn--dark" href="#">Подробнее
                           <span class="btn__icon">
                             <svg width="8" height="8" aria-hidden="true">
-                              <use xlink:href="#arrow-down"></use>
+                              <use xlink:href="img/sprite.svg#arrow-btn"></use>
                             </svg>
                           </span>
                         </a>
@@ -183,7 +183,7 @@
                         <a class="promo__button btn btn--dark" href="#">Подробнее
                           <span class="btn__icon">
                             <svg width="8" height="8" aria-hidden="true">
-                              <use xlink:href="#arrow-down"></use>
+                              <use xlink:href="img/sprite.svg#arrow-btn"></use>
                             </svg>
                           </span>
                         </a>
@@ -204,7 +204,7 @@
                         <a class="promo__button btn btn--dark" href="#">Подробнее
                           <span class="btn__icon">
                             <svg width="8" height="8" aria-hidden="true">
-                              <use xlink:href="#arrow-down"></use>
+                              <use xlink:href="img/sprite.svg#arrow-btn"></use>
                             </svg>
                           </span>
                         </a>
@@ -216,11 +216,54 @@
             </div>
           </div>
         </section>
+        <section class="about">
+          <div class="about__container container">
+            <div class="about__text-main">
+              <h2>О&nbsp;проекте &laquo;Маса&raquo;</h2>
+              <p>&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут.</p>
+            </div>
+            <div class="about__text-second">
+              <h3>Наша цель</h3>
+              <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать значимые изменения.</p>
+              <a class="about__btn btn btn--dark" href="#" data-open-modal="success">подробнее о проекте
+              <span class="btn__icon">
+                <svg width="8" height="8" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#arrow-btn"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="about__text-adv">
+            <ul class="about__list list-reset">
+              <li class="about__item">
+                <h4>более 250 программ</h4>
+                <p>учебных и рабочих, разной длительностью от 3&nbsp;месяцев до 1&nbsp;года</p>
+              </li>
+              <li class="about__item">
+                <h4>более 3000 участников</h4>
+                <p>уже успешно прошли программу от&nbsp;&laquo;Маса&raquo; и&nbsp;остались в&nbsp;Израиле</p>
+              </li>
+              <li class="about__item">
+                <h4>от&nbsp;4&nbsp;200&nbsp;$
+                  до&nbsp;8&nbsp;400&nbsp;$</h4>
+                <p>грант всем участникам для комфортного прохождения программы</p>
+              </li>
+              <li class="about__item">
+                <h4>участники из&nbsp;60&nbsp;стран</h4>
+                <p>студенты со&nbsp;всего мира приезжают на&nbsp;программу &laquo;Маса&raquo;</p>
+              </li>
+            </ul>
+          </div>
+          </div>
+        </section>
+        <section class="program">
+          <div class="program__container"></div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__nav">
-            <a class="footer__logo logo">
+            <a class="footer__logo logo" href="#index">
               <svg width="28" height="28" role="img" aria-hidden="true" aria-label="Логотип Masa" focusable="false">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
@@ -246,7 +289,7 @@
               </li>
             </ul>
           </div>
-          <ul class="footer__social-list">
+          <ul class="footer__social-list list-reset">
             <li class="footer__social-item">
               <a href="#" class="footer__social-link footer__social-link--vk" aria-label="Вконтакте">
                 <svg width="16" height="16">
@@ -279,20 +322,65 @@
     </div>
 
     <!-- Модалка -->
-<!-- <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
-    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+
+    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <h2>Напишите нам</h2>
+          <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
+          <div class="form" data-form-validate data-callback="base">
+            <form method="post" action="https://echo.htmlacademy.ru">
+              <div class="form__wrapper">
+                <div class="form__input custom-input" data-validate-type="text" data-on-input-validate data-required>
+                  <label for="user-name">Имя</label>
+                  <input type="name" id="user-name" name="user-name" required autocomplete="off">
+                </div>
+                <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate data-required>
+                  <label for="phone">Телефон</label>
+                  <input type="tel" id="phone" name="phone" required autocomplete="off">
+                </div>
+                <div class="form__input custom-select open-up" data-select="" data-validate-type="select" data-name="user-city" data-id="city" data-required="true">
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                    <span class="custom-select__text"></span>
+                    <span class="custom-select__icon">
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <span class="custom-select__label">Выберите город</span>
+                  <ul class="custom-select__list list-reset" role="listbox" data-scroll-lock-scrollable="">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Владивосток</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Череповец</li>
+                  </ul>
+                </div>
+                <div class="form__input form__input--checkbox custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                  <label for="modal-user-agreement">
+                    <input type="checkbox" value="user-agreement-1" id="modal-user-agreement" name="user-agreement">
+                    <span>Я согласен на обработку моих персональных данных</span>
+                  </label>
+                </div>
+              </div>
+              <button class="form__btn btn btn--dark form__submit" type="submit">Отправить
+                <span class="btn__icon">
+                  <svg width="8" height="8" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#arrow-btn"></use>
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

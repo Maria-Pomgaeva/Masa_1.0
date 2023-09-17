@@ -7,18 +7,20 @@
   inset: 0;
 }
 
-// .promo__swiper-image {
-//   height: 100%;
-// }
+.promo__swiper-image {
+  height: 100%;
+}
 
 .promo__slide-image {
   width: 100%;
+  height: 100%;
 
   background-color: $color-cerulean-blue;
 }
 
 .promo__slide-image img {
   width: 100%;
+  height: 100%;
 }
 
 .promo__slide-image::before {
@@ -51,6 +53,32 @@
 
   background-color: $color-default-white;
   border-radius: 20px 20px 0px 0px;
+
+  @include vp-767 {
+    padding: 10px 16px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+    right: -10px;
+    width: 26px;
+    height: 26px;
+
+    background-image: url("../../img/sprite.svg#star-icon");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      background-size: 10px;
+      top: 20px;
+      right: -10px;
+    }
+  }
 }
 
 .promo__pagination-bullet {
@@ -63,6 +91,11 @@
 
   transition: background-color $trans-default;
   cursor: pointer;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .promo__pagination-bullet.is-active {
@@ -72,36 +105,42 @@
 .promo__container-content {
   display: flex;
   align-items: flex-end;
-  // padding: 84px 0 60px;
-  min-width: 968px;
+
+  min-height: 800px;
+
+  padding-top: 84px;
+  padding-bottom: 60px;
 
   @include vp-1199 {
-    padding: 0 45px 60px;
-
-    min-width: 659px;
+    min-height: 1024px;
   }
 
   @include vp-767 {
-    padding: 0 15px 20px;
+    min-height: 568px;
+    padding-bottom: 20px;
   }
 }
 
 .promo__text-header {
   background-color: $color-default-white;
-  padding: 40px 30px 50px;
+  max-width: 1021px;
+  padding: 40px 50px 30px;
   border-radius: 0 30px 30px 0;
 
   @include vp-1199 {
-    padding: 30px 40px 24px 40px;
+    max-width: 97%;
+    padding: 32px 20px 25px 40px;
   }
 
   @include vp-767 {
+    max-width: 290px;
     padding: 20px 14px 16px 14px;
     border-radius: 0 16px 16px 0;
   }
 
   & h2 {
     font-size: 54px;
+    font-weight: 400;
     line-height: 62px;
     color: $color-cerulean-blue;
     margin: 0;
@@ -119,13 +158,14 @@
 }
 
 .promo__text-bottom {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 
-  max-width: 772px;
-  max-height: 89px;
+  max-width: 64.3%;
+  min-height: 105px;
   margin-top: -2px;
 
   background-color: $color-default-white;
@@ -135,19 +175,21 @@
   @include vp-1199 {
     padding: 0 40px 35px 40px;
 
-    max-width: 591px;
+    max-width: 91.3%;
   }
 
   @include vp-767 {
     display: block;
     background-color: $color-transparent;
-
+    max-width: none;
+    padding: 0;
   }
 
   & p {
     color: $color-charcoal;
     font-size: 16px;
     line-height: 26px;
+    margin: 0;
 
     @include vp-1199 {
       line-height: 20px;
@@ -159,17 +201,56 @@
   }
 }
 
+.promo__text-bottom::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  right: -26px;
+  width: 26px;
+  height: 26px;
+
+  background-image: url("../../img/sprite.svg#star-icon");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px;
+
+  @include vp-767 {
+    width: 10px;
+    height: 10px;
+    background-size: 10px;
+    right: 20px;
+  }
+}
+
 .promo__text-content {
   @include vp-767 {
     background-color: $color-default-white;
     padding: 0 14px 15px 14px;
     border-radius: 0 0 14px 0;
+    max-width: 260px;
   }
 }
 
 .promo__text-button {
   @include vp-767 {
+    position: relative;
     background-color: $color-default-white;
     padding: 10px 15px;
+    width: 220px;
+    border-radius: 0px 0px 14px 14px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      right: -10px;
+      width: 10px;
+      height: 10px;
+
+      background-image: url("../../img/sprite.svg#star-icon");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px;
+    }
   }
 }

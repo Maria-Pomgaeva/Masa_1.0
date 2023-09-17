@@ -10,8 +10,7 @@
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
-  background-color: rgba($color-charcoal, 0.8);
+  background-color: rgba(13, 29, 51, 0.40);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -53,6 +52,7 @@
     width: 100%;
     height: 100%;
 
+
     cursor: pointer;
   }
 
@@ -60,13 +60,14 @@
     position: relative;
 
     width: 600px;
-    padding: 40px;
+    padding: 60px 80px;
 
     background-color: $color-default-white;
+    border-radius: 16px;
 
     @include vp-767 {
       width: 100%;
-      padding: 20px;
+      padding: 40px 15px;
     }
   }
 
@@ -76,12 +77,12 @@
     right: 22px;
     z-index: 1;
 
-    width: 40px;
-    height: 40px;
+    width: 18px;
+    height: 18px;
     padding: 0;
 
     background: $color-transparent;
-    border: none;
+    border: 1px solid $color-cerulean-blue;
     cursor: pointer;
   }
 
@@ -115,5 +116,49 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $color-cerulean-blue;
+
+    text-align: center;
+    margin: 0 0 20px;
+
+    @include vp-1199 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+
+    max-width: 350px;
+    margin: 0;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      max-width: 220px;
+    }
   }
 }
