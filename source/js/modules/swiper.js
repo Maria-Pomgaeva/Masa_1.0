@@ -12,7 +12,6 @@ export const initSwiper = function () {
   // eslint-disable-next-line
   const promoContent = new window.Swiper('.promo__swiper-content', {
     slidesPerView: 1,
-    // loop: true,
     effect: 'fade',
     autoHeight: true,
 
@@ -39,4 +38,33 @@ export const initSwiper = function () {
   promoImage.controller.control = promoContent;
   promoContent.controller.control = promoImage;
 
+  // eslint-disable-next-line
+  const programSwiper = new window.Swiper('.program__swiper', {
+    spaceBetween: 15,
+    slidesPerView: 1,
+
+    navigation: {
+      nextEl: '.program__btn--next',
+      prevEl: '.program__btn--prev',
+    },
+
+    scrollbar: {
+      el: '.program__scrollbar',
+      draggable: true,
+    },
+
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        allowTouchMove: true,
+      },
+      1200: {
+        slidesOffsetBefore: 0,
+        spaceBetween: 32,
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+    },
+  })
 };
