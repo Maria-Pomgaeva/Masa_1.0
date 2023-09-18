@@ -40,12 +40,10 @@ export const initSwiper = function () {
 
   // eslint-disable-next-line
   const programSwiper = new window.Swiper('.program__swiper', {
-    spaceBetween: 15,
-    slidesPerView: 1,
 
     navigation: {
-      nextEl: '.program__btn--next',
-      prevEl: '.program__btn--prev',
+      nextEl: '.program__navigation-btn--next',
+      prevEl: '.program__navigation-btn--prev',
     },
 
     scrollbar: {
@@ -66,5 +64,49 @@ export const initSwiper = function () {
         allowTouchMove: false,
       },
     },
-  })
+  });
+  // eslint-disable-next-line
+  const newsSwiper = new window.Swiper('.news__swiper', {
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      bulletActiveClass: 'is-active',
+      bulletClass: 'news__pagination-btn scrollbar__pagination-btn',
+      renderBullet(index, className) {
+        return '<button class="' + className + '" type="button">' + (index + 1) + '</button>';
+      },
+    },
+    spaceBetween: 20,
+    slidesPerView: 1,
+    allowTouchMove: true,
+    grid: {
+      rows: 2,
+      fill: 'row',
+    },
+
+    navigation: {
+      nextEl: '.news__btn--next',
+      prevEl: '.news__btn--prev',
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        allowTouchMove: true,
+        slidesPerView: 2,
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
+      },
+
+      1200: {
+        spaceBetween: 32,
+        allowTouchMove: false,
+        slidesPerView: 'auto',
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+  });
 };

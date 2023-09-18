@@ -32,8 +32,8 @@
 .btn__icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 3px;
+  transform: translateY(-50%);
 
   display: flex;
   align-items: center;
@@ -42,6 +42,29 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
+  background-color: $color-cerulean-blue;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+
+  &--min {
+    position: static;
+    width: 30px;
+    height: 30px;
+
+  }
+
+  & svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    margin: auto;
+    transform: rotate(0deg);
+    fill: currentColor;
+  }
 }
 
 .btn--dark {

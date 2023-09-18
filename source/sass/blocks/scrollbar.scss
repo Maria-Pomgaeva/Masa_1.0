@@ -1,8 +1,9 @@
 .scrollbar {
   position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
+  gap: 52px;
 }
 
 .scrollbar__bar {
@@ -12,7 +13,7 @@
   background-color: rgba(49, 109, 194, 0.2);
 }
 
-.scrollbar__bar.swiper-scrollbar-drag {
+.scrollbar__bar .swiper-scrollbar-drag {
   background-color: $color-cerulean-blue;
 }
 

@@ -11,6 +11,11 @@
   }
 }
 
+.program__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .program__head {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +27,7 @@
     font-weight: 400;
     line-height: 50px;
     color: $color-cerulean-blue;
+    margin: 0;
 
     @include vp-1199 {
       font-size: 34px;
@@ -34,24 +40,25 @@
   }
 }
 
+.program__head-btn {
+  @include vp-767 {
+    order: 1;
+  }
+}
+
 .program__wrapper {
   margin-bottom: 40px;
 }
 
 .program__slide {
-  position: relative;
-  height: auto;
-  min-width: 392px;
-  padding: 20px 51px 20px;
-  z-index: 1;
+  max-width: 392px;
 
   @include vp-1199 {
-    padding-right: 41px;
-    min-height: 324px;
+    max-width: 324px;
   }
 
   @include vp-767 {
-    padding: 18px 10px ;
+    max-width: 290px;
   }
 
   &::before {
@@ -60,48 +67,49 @@
     inset: 0;
     z-index: 1;
     background-color: rgba(49, 109, 194, 0.2);
+    border-radius: 12px;
   }
 }
 
-.tours__image {
-  position: absolute;
-  border-radius: 12px;
-  z-index: -1;
-
-  inset: 0;
-}
-
-.tours__image img {
+.program__image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 12px;
+  background-color: $color-cerulean-blue;
 }
 
 .program__text-container {
-  position: relative;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  z-index: 2;
 
-  width: 100%;
-  padding-top: 60%;
+  max-height: 420px;
+  padding: 20px;
   inset: 0;
 
-  z-index: 2;
+  @include vp-767 {
+    padding: 18px 10px;
+  }
 }
 
 .program__text-header {
   background-color: $color-default-white;
   max-width: 194px;
-  padding: 18px 18px 6px 18px;
+
+  margin-bottom: -2px;
+  padding: 12px 19px 1px;
   border-radius: 12px 12px 0px 0px;
 
   @include vp-1199 {
     max-width: 173px;
+    padding: 14px 19px 1px;
   }
 
   @include vp-767 {
     max-width: 146px;
+    padding: 18px 19px 7px;
   }
 
   & h3 {
@@ -109,6 +117,7 @@
     font-weight: 400;
     line-height: 26px;
     color: $color-cerulean-blue;
+    margin: 0;
 
     @include vp-1199 {
       font-size: 20px;
@@ -128,13 +137,14 @@
 
   min-height: 79px;
   max-width: 321px;
-  padding: 12px 18px 15px 18px;
+  padding: 10px 17px;
   border-radius: 0px 12px 12px 12px;
   background-color: $color-default-white;
 
   @include vp-1199 {
     min-height: 77px;
     max-width: 263px;
+    padding: 7px 18px 10px;
   }
 
   @include vp-767 {
@@ -145,6 +155,7 @@
   & p {
     font-size: 14px;
     line-height: 18px;
+    margin: 0;
 
     @include vp-1199 {
       line-height: 20px;
@@ -154,5 +165,21 @@
       font-size: 12px;
       line-height: 14px;
     }
+  }
+}
+
+.program__btn {
+  margin-top: 25px;
+}
+
+.program__bar {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.program__navigation {
+  @include vp-767 {
+    order: 1;
   }
 }
