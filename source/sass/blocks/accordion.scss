@@ -1,0 +1,172 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion__element {
+  position: relative;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+  background-color: $color-transparent;
+
+  @include vp-1199 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+}
+
+.accordion__element.is-active {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+}
+
+.accordion__title {
+  & h3 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: $color-cerulean-blue;
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+.accordion__element.is-active h3 {
+  color: $color-default-white;
+}
+
+.accordion__text {
+  & p {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-default-white;
+    margin: 30px 0 0;
+
+    @include vp-1199 {
+      line-height: 20px;
+      margin-top: 32px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      margin-top: 22px;
+    }
+  }
+}
+
+.accordion__button-inner {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-transparent;
+  cursor: pointer;
+}
+
+.accordion__button-inner:hover,
+.accordion__button-inner:focus {
+  background-color: $color-transparent;
+  border: 1px solid $color-cerulean-blue;
+  outline: none;
+}
+
+.accordion__button-inner:active {
+  background-color: $color-endeavour;
+  border: 1px solid $color-transparent;
+}
+
+.accordion__button-inner:disabled {
+  background-color: $color-disabled;
+  border: 1px solid $color-transparent;
+}
+
+.accordion__button-inner:hover::before,
+.accordion__button-inner:hover::after,
+.accordion__button-inner:focus::before,
+.accordion__button-inner:focus::after {
+  background: $color-cerulean-blue;
+}
+
+.accordion__button-inner:active::before,
+.accordion__button-inner:active::after {
+  background: $color-default-white;
+}
+
+.accordion__button-inner:disabled:before,
+.accordion__button-inner:disabled::after {
+  background: $color-default-white;
+}
+
+.accordion__button-inner::before,
+.accordion__button-inner::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 18px;
+
+  background-color: $color-default-white;
+}
+
+.accordion__button-inner::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion__element.is-active .accordion__button-inner {
+  background-color: $color-default-white;
+  border: 1x solid $color-transparent;
+  transform: rotate(90deg);
+  top: 25%;
+  right: 40px;
+
+  // @include vp-767 {
+  //   transform: rotate(180deg);
+  //   top: 22%;
+  // }
+}
+
+.accordion__element.is-active .accordion__button-inner:hover,
+.accordion__element.is-active .accordion__button-inner:focus {
+  background-color: $color-transparent;
+  border: 1x solid $color-default-white;
+}
+
+.accordion__element.is-active .accordion__button-inner::before,
+.accordion__element.is-active .accordion__button-inner::after {
+  background: $color-cerulean-blue;
+  border: 1x solid $color-default-white;
+}
+
+.accordion__element.is-active .accordion__button-inner:hover:before,
+.accordion__element.is-active .accordion__button-inner:focus:before {
+  background: $color-default-white;
+}
+
+.accordion__element.is-active .accordion__button-inner:active:before {
+  background: $color-cerulean-blue;
+}
+
+.accordion__element.is-active .accordion__button-inner::after {
+  display: none;
+}

@@ -89,8 +89,8 @@
     }
 
     &:disabled {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-color: $color-default-white;
+      background-color: rgba($color-disabled, 0.2);
+      border-color: $color-disabled;
       pointer-events: none;
       opacity: 0.4;
     }
@@ -110,7 +110,7 @@
     list-style: none;
 
     background-color: $color-default-white;
-    border: 1px solid $color-default-white;
+    border: 1px solid $color-charcoal;
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;

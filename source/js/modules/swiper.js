@@ -85,8 +85,8 @@ export const initSwiper = function () {
     },
 
     navigation: {
-      nextEl: '.news__btn--next',
-      prevEl: '.news__btn--prev',
+      nextEl: '.news__navigation-btn--next',
+      prevEl: '.news__navigation-btn--prev',
     },
     breakpoints: {
       768: {
@@ -106,6 +106,31 @@ export const initSwiper = function () {
         grid: {
           rows: 1,
         },
+      },
+    },
+  });
+  // eslint-disable-next-line
+  const swiperReviews = new window.Swiper('.reviews__swiper', {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.reviews__navigation-btn--next',
+      prevEl: '.reviews__navigation-btn--prev',
+    },
+    scrollbar: {
+      el: '.reviews__scrollbar',
+      draggable: true,
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        allowTouchMove: true,
+      },
+      1200: {
+        spaceBetween: 32,
+        slidesPerView: 2,
+        allowTouchMove: false,
       },
     },
   });

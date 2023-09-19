@@ -5,6 +5,7 @@ import {initAccordions} from './modules/accordions/init-accordion';
 import {initSwiper} from './modules/swiper';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
+import {initMap} from './modules/map';
 
 // ---------------------------------
 
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     menuOpen();
     initAccordions();
     initSwiper();
+    initMap();
     const form = new Form();
     window.form = form;
     form.init();

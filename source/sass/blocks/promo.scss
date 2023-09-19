@@ -61,12 +61,14 @@
   &::after {
     position: absolute;
     content: "";
-    top: 6px;
-    right: -10px;
+    top: 5px;
+    right: -23px;
+    transform: rotate(-90deg);
     width: 26px;
     height: 26px;
 
-    background-image: url("../../img/sprite.svg#star-icon");
+    background-image: url("../img/sprite/angle.svg");
+    color: $color-default-white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;
@@ -75,8 +77,8 @@
       width: 10px;
       height: 10px;
       background-size: 10px;
-      top: 20px;
-      right: -10px;
+      top: 21px;
+      right: -9px;
     }
   }
 }
@@ -209,7 +211,8 @@
   width: 26px;
   height: 26px;
 
-  background-image: url("../../img/sprite.svg#star-icon");
+  background-image: url("../img/sprite/angle.svg");
+  color: $color-default-white;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
@@ -218,7 +221,8 @@
     width: 10px;
     height: 10px;
     background-size: 10px;
-    right: 20px;
+    top: 1px;
+    right: 21px;
   }
 }
 
@@ -235,6 +239,8 @@
   @include vp-767 {
     position: relative;
     background-color: $color-default-white;
+
+    margin-top: -1px;
     padding: 10px 15px;
     width: 220px;
     border-radius: 0px 0px 14px 14px;
@@ -242,12 +248,13 @@
     &::after {
       position: absolute;
       content: "";
-      top: 6px;
-      right: -10px;
+      top: 0;
+      right: -9px;
       width: 10px;
       height: 10px;
 
-      background-image: url("../../img/sprite.svg#star-icon");
+      background-image: url("../img/sprite/angle.svg");
+      color: $color-default-white;
       background-repeat: no-repeat;
       background-position: center;
       background-size: 10px;

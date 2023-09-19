@@ -6,6 +6,13 @@
   gap: 52px;
 }
 
+.scrollbar .scrollbar__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .scrollbar__bar {
   position: static;
   width: 100%;
@@ -13,7 +20,7 @@
   background-color: rgba(49, 109, 194, 0.2);
 }
 
-.scrollbar__bar .swiper-scrollbar-drag {
+.scrollbar__bar.swiper-scrollbar-drag {
   background-color: $color-cerulean-blue;
 }
 
@@ -38,4 +45,23 @@
   &--next {
     transform: rotate(180deg);
   }
+}
+
+.scrollbar__pagination-btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-cerulean-blue;
+  opacity: 0.5;
+}
+
+.scrollbar__pagination-btn.is-active {
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
 }

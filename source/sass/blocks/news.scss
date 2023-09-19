@@ -118,7 +118,7 @@
 
 .news__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 12px;
   background-color: $color-cerulean-blue;
 }
@@ -127,25 +127,75 @@
   margin-bottom: -1px;
 
   z-index: 2;
+}
 
-  & time {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: 0.12px;
-    text-transform: uppercase;
-    color: $color-cerulean-blue;
+.news__time {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
 
-    margin-left: -1px;
-    padding: 7px 14px 5px 0;
-    background-color: $color-alabaster;
-    border-radius: 0px 12px 0px 0px;
+  margin-left: -1px;
+  padding: 7px 14px 5px 0;
+  background-color: $color-alabaster;
+  border-radius: 0px 12px 0px 0px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -24px;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 26px;
+    height: 26px;
+
+    background-image: url("../img/sprite/angle.svg");
+    color: $color-alabaster;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      background-size: 10px;
+      top: 32px;
+      right: -9px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 2px;
+    right: -25px;
+    transform: rotate(-90deg);
+    width: 26px;
+    height: 26px;
+
+    background-image: url("../img/sprite/angle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      background-size: 10px;
+      top: 32px;
+      right: -9px;
+    }
   }
 }
 
 .news__text-header {
+  position: relative;
   margin: 0 0 -1px -1px;
   padding: 5px 8px 1px 1px;
+
   background-color: $color-alabaster;
   border-radius: 0px 12px 0px 0px;
   max-width: 75%;
@@ -167,6 +217,29 @@
       line-height: 18px;
     }
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 2px;
+    right: -25px;
+    transform: rotate(-90deg);
+    width: 26px;
+    height: 26px;
+
+    background-image: url("../img/sprite/angle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      background-size: 10px;
+      top: 32px;
+      right: -9px;
+    }
+  }
 }
 
 .news__text-header .news__slide--big {
@@ -175,6 +248,7 @@
 }
 
 .news__text {
+  position: relative;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -198,8 +272,35 @@
       line-height: 14px;
     }
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 2px;
+    right: -25px;
+    transform: rotate(-90deg);
+    width: 26px;
+    height: 26px;
+
+    background-image: url("../img/sprite/angle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      background-size: 10px;
+      top: 32px;
+      right: -9px;
+    }
+  }
 }
 
 .news__text-btn {
   margin-top: 30px;
+}
+
+.news__scrollbar {
+  grid-template-columns: auto 1fr auto;
 }

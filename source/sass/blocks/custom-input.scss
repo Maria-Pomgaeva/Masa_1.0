@@ -58,6 +58,22 @@
     }
   }
 
+  input {
+    min-height: 50px;
+
+    @include vp-767 {
+      min-height: 50px;
+    }
+  }
+
+  textarea {
+    min-height: 98px;
+
+    @include vp-767 {
+      min-height: 94px;
+    }
+  }
+
   &__error {
     position: absolute;
     right: 0;
