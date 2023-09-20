@@ -1,8 +1,18 @@
 .map {
-  width: 100%;
-  height: 100%;
+  width: 1240px;
+  height: 500px;
   border-radius: inherit;
   pointer-events: none;
+
+  @include vp-1199 {
+    width: 678px;
+    height: 500px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 240px;
+  }
 
   & .leaflet-marker-icon {
     pointer-events: none;

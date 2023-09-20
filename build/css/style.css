@@ -4157,16 +4157,11 @@ button,
 }
 
 .reviews__slide {
-  min-height: 430px;
+  height: auto;
 }
 @media (max-width: 1199px) {
   .reviews__slide {
-    min-height: 395px;
-  }
-}
-@media (max-width: 767px) {
-  .reviews__slide {
-    margin-bottom: 435px;
+    max-width: 560px;
   }
 }
 
@@ -4174,20 +4169,18 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px;
+  padding: 50px 50px 43px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: rgba(255, 255, 255, 0);
   gap: 30px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   border-radius: 16px;
   border: 1px solid #316dc2;
-}
-@media (max-width: 1199px) {
-  .reviews__card {
-    padding: 50px;
-  }
 }
 @media (max-width: 767px) {
   .reviews__card {
@@ -4235,6 +4228,7 @@ button,
 .reviews__person img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 .reviews__person p {
   font-size: 18px;
@@ -4398,12 +4392,13 @@ button,
 .contacts__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 270px auto auto;
-  grid-template-columns: 270px auto auto;
+  -ms-grid-columns: 290px auto auto;
+  grid-template-columns: 290px auto auto;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
   gap: 51px;
+  margin: 0;
 }
 @media (max-width: 1199px) {
   .contacts__list {
@@ -4451,6 +4446,11 @@ button,
   }
 }
 
+.contacts__item-link {
+  margin: 0;
+  color: #ffffff;
+}
+
 .contacts__map {
   position: relative;
   z-index: 1;
@@ -4466,10 +4466,22 @@ button,
 }
 
 .map {
-  width: 100%;
-  height: 100%;
+  width: 1240px;
+  height: 500px;
   border-radius: inherit;
   pointer-events: none;
+}
+@media (max-width: 1199px) {
+  .map {
+    width: 678px;
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .map {
+    width: 290px;
+    height: 240px;
+  }
 }
 .map .leaflet-marker-icon {
   pointer-events: none;
@@ -4489,7 +4501,7 @@ button,
   }
 }
 
-.feedback__container {
+.feedback__wrapper {
   position: relative;
 }
 

@@ -54,9 +54,10 @@
 
 .contacts__list {
   display: grid;
-  grid-template-columns: 270px auto auto;
+  grid-template-columns: 290px auto auto;
   justify-content: end;
   gap: 51px;
+  margin: 0;
 
   @include vp-1199 {
     gap: 20px 87px;
@@ -97,6 +98,11 @@
       font-size: 14px;
     }
   }
+}
+
+.contacts__item-link {
+  margin: 0;
+  color: $color-default-white;
 }
 
 .contacts__map {

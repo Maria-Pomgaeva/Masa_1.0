@@ -46,30 +46,27 @@
 }
 
 .reviews__slide {
-  min-height: 430px;
+  height: auto;
 
   @include vp-1199 {
-    min-height: 395px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 435px;
+    max-width: 560px;
   }
 }
 
 .reviews__card {
   display: flex;
-  padding: 50px;
+  padding: 50px 50px 43px;
   flex-direction: column;
   background-color: $color-transparent;
   gap: 30px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
 
-  @include vp-1199 {
-    padding: 50px;
-  }
+
 
   @include vp-767 {
     padding: 30px 15px;
@@ -101,6 +98,7 @@
   & img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
   }
 
   & p {

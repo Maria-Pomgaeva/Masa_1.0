@@ -826,79 +826,81 @@
                 </div>
                 <div class="contacts__item">
                   <dt>Телефон</dt>
-                  <dd><a href="tel:+796387687676">+7&nbsp;963&nbsp;876&nbsp;876&nbsp;76</a></dd>
+                  <dd><a class="contacts__item-link" href="tel:+796387687676">+7&nbsp;963&nbsp;876&nbsp;876&nbsp;76</a></dd>
                 </div>
                 <div class="contacts__item">
                   <dt>E-mail</dt>
-                  <dd><a href="mailto:Info@masa.ru">Info@masa.ru</a></dd>
+                  <dd><a class="contacts__item-link" href="mailto:Info@masa.ru">Info@masa.ru</a></dd>
                 </div>
               </dl>
             </div>
-            <div class="contacts__map">
-              <div class="map" data-map></div>
+            <div class="contacts__map map">
+              <div class="map__block" data-map></div>
             </div>
           </div>
         </section>
         <section class="feedback" id="feedback">
-          <div class="feedback__container contacts">
-            <div class="feedback__image">
-              <picture>
-                <source media="(max-width: 1199px)" type="image/webp" srcset="img/feedback/tablet-photo.webp 1x, img/feedback/tablet-photo@2x.webp 2x">
-                <source media="(max-width: 1199px)" srcset="img/feedback/tablet-photo.jpg 1x, img/feedback/tablet-photo@2x.jpg 2x">
-                <source type="image/webp" srcset="img/feedback/desktop-photo.webp 1x, img/feedback/desktop-photo@2x.webp 2x">
-                <img src="img/feedback/desktop-photo.jpg" srcset="img/feedback/desktop-photo@2x.jpg" width="1240" height="803" alt="Пляж">
-              </picture>
-            </div>
-            <div class="feedback__form">
-              <h2>Напишите нам</h2>
-              <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-              <div class="form" data-form-validate data-callback="base">
-                <form method="post" action="https://echo.htmlacademy.ru">
-                  <div class="form__wrapper feedback__wrapper">
-                    <div class="form__input custom-input feedback__input" data-validate-type="text" data-on-input-validate data-required>
-                      <label for="feedback-name">Имя</label>
-                      <input type="text" id="feedback-name" name="user-name">
-                    </div>
-                    <div class="form__input custom-input feedback__input" data-validate-type="phone" data-on-input-validate data-required>
-                      <label for="feedback-phone">Телефон</label>
+          <div class="feedback__container container">
+            <div class="feedback__wrapper">
+              <div class="feedback__image">
+                <picture>
+                  <source media="(max-width: 1199px)" type="image/webp" srcset="img/feedback/tablet-photo.webp 1x, img/feedback/tablet-photo@2x.webp 2x">
+                  <source media="(max-width: 1199px)" srcset="img/feedback/tablet-photo.jpg 1x, img/feedback/tablet-photo@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/feedback/desktop-photo.webp 1x, img/feedback/desktop-photo@2x.webp 2x">
+                  <img src="img/feedback/desktop-photo.jpg" srcset="img/feedback/desktop-photo@2x.jpg" width="1240" height="803" alt="Пляж">
+                </picture>
+              </div>
+              <div class="feedback__form">
+                <h2>Напишите нам</h2>
+                <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+                <div class="form" data-form-validate data-callback="base">
+                  <form method="post" action="https://echo.htmlacademy.ru">
+                    <div class="form__wrapper feedback__wrapper">
+                      <div class="form__input custom-input" data-validate-type="text" data-on-input-validate data-required>
+                        <label for="feedback-name">Имя</label>
+                        <input type="text" id="feedback-name" name="user-name">
+                      </div>
+                      <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate data-required>
+                        <label for="feedback-phone">Телефон</label>
                       <input type="tel" id="feedback-phone" name="phone" required autocomplete="off">
+                      </div>
+                      <div class="form__input form__input--textarea custom-input custom-input--textarea" data-validate-type="text" data-required>
+                        <label for="user-message">Ваше сообщение</label>
+                        <textarea id="user-message" name="user-message"></textarea>
+                      </div>
+                      <div class="form__input custom-select open-up" data-select="" data-validate-type="select" data-name="user-city" data-id="city" data-required="true">
+                        <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                          <span class="custom-select__text"></span>
+                          <span class="custom-select__icon">
+                            <svg width="16" height="16" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </span>
+                        </button>
+                        <span class="custom-select__label">Выберите город</span>
+                        <ul class="custom-select__list list-reset" role="listbox" data-scroll-lock-scrollable="">
+                          <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Владивосток</li>
+                          <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Череповец</li>
+                        </ul>
+                      </div>
+                      <div class="form__input form__input--checkbox custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                        <label for="feedback-user-agreement">
+                          <input type="checkbox" value="user-agreement-1" id="feedback-user-agreement" name="user-agreement">
+                          <span>Я согласен на обработку моих персональных данных</span>
+                        </label>
+                      </div>
                     </div>
-                    <div class="form__input form__input--textarea custom-input custom-input--textarea feedback__input" data-validate-type="text" data-required>
-                      <label for="user-message">Ваше сообщение</label>
-                      <textarea id="user-message" name="user-message"></textarea>
-                    </div>
-                    <div class="form__input custom-select open-up feedback__input" data-select="" data-validate-type="select" data-name="user-city" data-id="city" data-required="true">
-                      <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
-                        <span class="custom-select__text"></span>
-                        <span class="custom-select__icon">
-                          <svg width="16" height="16" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#arrow-down"></use>
-                          </svg>
-                        </span>
-                      </button>
-                      <span class="custom-select__label">Выберите город</span>
-                      <ul class="custom-select__list list-reset" role="listbox" data-scroll-lock-scrollable="">
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Владивосток</li>
-                        <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Череповец</li>
-                      </ul>
-                    </div>
-                    <div class="form__input form__input--checkbox custom-toggle custom-toggle--checkbox feedback__input" data-validate-type="checkbox">
-                      <label for="feedback-user-agreement">
-                        <input type="checkbox" value="user-agreement-1" id="feedback-user-agreement" name="user-agreement">
-                        <span>Я согласен на обработку моих персональных данных</span>
-                      </label>
-                    </div>
-                  </div>
-                  <button class="form__btn btn btn--dark form__submit feedback__input" type="submit">Отправить
-                    <span class="btn__icon">
-                      <svg width="8" height="8" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#arrow-btn"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </form>
+                    <button class="form__btn btn btn--light form__submit" type="submit">Отправить
+                      <span class="btn__icon">
+                        <svg width="8" height="8" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#arrow-btn"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
