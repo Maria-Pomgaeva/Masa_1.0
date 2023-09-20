@@ -13,15 +13,12 @@
     pointer-events: none;
   }
 
-  &:not([disabled]),
-  &:not(&--disabled) {
-    @include hover-focus {
-      opacity: 0.6;
-    }
+  @include hover-focus {
+    opacity: 0.6;
+  }
 
-    @include active {
-      opacity: 0.3;
-    }
+  @include active {
+    opacity: 0.3;
   }
 }
 

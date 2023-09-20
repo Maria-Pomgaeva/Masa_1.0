@@ -40,7 +40,6 @@ export const initSwiper = function () {
 
   // eslint-disable-next-line
   const programSwiper = new window.Swiper('.program__swiper', {
-
     navigation: {
       nextEl: '.program__navigation-btn--next',
       prevEl: '.program__navigation-btn--prev',

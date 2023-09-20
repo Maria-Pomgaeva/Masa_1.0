@@ -88,6 +88,7 @@
       font-size: 16px;
       line-height: 26px;
     }
+
     @include vp-767 {
       font-size: 14px;
       line-height: 20px;
@@ -116,7 +117,7 @@
 
 .about__list {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 
   @include vp-1199 {

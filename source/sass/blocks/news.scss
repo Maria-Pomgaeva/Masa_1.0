@@ -31,6 +31,7 @@
     line-height: 50px;
     text-align: center;
     margin: 0;
+    color: $color-cerulean-blue;
 
     @include vp-1199 {
       font-size: 34px;
@@ -141,7 +142,7 @@
   margin-left: -1px;
   padding: 7px 14px 5px 0;
   background-color: $color-alabaster;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
 
   &::before {
     position: absolute;
@@ -197,7 +198,7 @@
   padding: 5px 8px 1px 1px;
 
   background-color: $color-alabaster;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
   max-width: 75%;
 
   & h3 {
@@ -254,14 +255,16 @@
   align-items: center;
 
   margin-left: -1px;
+  margin-top: -2px;
   padding: 9px 18px 13px 1px;
   background-color: $color-alabaster;
-  border-radius: 0px 12px;
+  border-radius: 0 12px;
   max-width: 84%;
 
   & p {
     font-size: 14px;
     line-height: 18px;
+    margin: 0;
 
     @include vp-1199 {
       line-height: 20px;
@@ -303,4 +306,8 @@
 
 .news__scrollbar {
   grid-template-columns: auto 1fr auto;
+}
+
+.news__navigation-btn--prev {
+  order: -1;
 }

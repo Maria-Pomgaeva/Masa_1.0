@@ -101,7 +101,7 @@
 
   margin-bottom: -2px;
   padding: 12px 19px 1px;
-  border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0 0;
 
   @include vp-1199 {
     max-width: 173px;
@@ -163,7 +163,7 @@
   min-height: 79px;
   max-width: 321px;
   padding: 10px 17px;
-  border-radius: 0px 12px 12px 12px;
+  border-radius: 0 12px 12px 12px;
   background-color: $color-default-white;
 
   @include vp-1199 {
@@ -194,7 +194,7 @@
 }
 
 .program__btn {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .program__bar {

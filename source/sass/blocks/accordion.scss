@@ -32,6 +32,7 @@
     line-height: 34px;
     color: $color-cerulean-blue;
     margin: 0;
+    max-width: 720px;
 
     @include vp-1199 {
       font-size: 22px;
@@ -41,6 +42,7 @@
     @include vp-767 {
       font-size: 16px;
       line-height: 18px;
+      max-width: 570px;
     }
   }
 }
@@ -55,6 +57,7 @@
     line-height: 26px;
     color: $color-default-white;
     margin: 30px 0 0;
+    max-width: 720px;
 
     @include vp-1199 {
       line-height: 20px;
@@ -64,6 +67,7 @@
     @include vp-767 {
       font-size: 14px;
       margin-top: 22px;
+      max-width: 570px;
     }
   }
 }
@@ -111,7 +115,7 @@
   background: $color-default-white;
 }
 
-.accordion__button-inner:disabled:before,
+.accordion__button-inner:disabled::before,
 .accordion__button-inner:disabled::after {
   background: $color-default-white;
 }
@@ -119,7 +123,7 @@
 .accordion__button-inner::before,
 .accordion__button-inner::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -135,9 +139,9 @@
 
 .accordion__element.is-active .accordion__button-inner {
   background-color: $color-default-white;
-  border: 1x solid $color-transparent;
+  border: 1px solid $color-cerulean-blue;
   transform: rotate(90deg);
-  top: 25%;
+  top: 17%;
   right: 40px;
 
   // @include vp-767 {
@@ -149,21 +153,20 @@
 .accordion__element.is-active .accordion__button-inner:hover,
 .accordion__element.is-active .accordion__button-inner:focus {
   background-color: $color-transparent;
-  border: 1x solid $color-default-white;
+  border: 1px solid $color-default-white;
 }
 
 .accordion__element.is-active .accordion__button-inner::before,
 .accordion__element.is-active .accordion__button-inner::after {
   background: $color-cerulean-blue;
-  border: 1x solid $color-default-white;
 }
 
-.accordion__element.is-active .accordion__button-inner:hover:before,
-.accordion__element.is-active .accordion__button-inner:focus:before {
+.accordion__element.is-active .accordion__button-inner:hover::before,
+.accordion__element.is-active .accordion__button-inner:focus::before {
   background: $color-default-white;
 }
 
-.accordion__element.is-active .accordion__button-inner:active:before {
+.accordion__element.is-active .accordion__button-inner:active::before {
   background: $color-cerulean-blue;
 }
 
