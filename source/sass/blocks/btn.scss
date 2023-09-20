@@ -30,6 +30,20 @@
       position: static;
       width: 30px;
       height: 30px;
+
+      &:hover,
+      &:focus {
+        background-color: $color-default-white;
+
+        & svg {
+          stroke: $color-cerulean-blue;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:disabled {
+        background-color: $color-disabled;
+      }
     }
   }
 
@@ -68,25 +82,81 @@
     margin: auto;
     transform: rotate(0deg);
     fill: currentColor;
+    stroke: $color-default-white;
   }
 }
 
 .btn--dark {
   color: $color-cerulean-blue;
   border-color: $color-cerulean-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    & .btn__icon {
+      background-color: $color-default-white;
+    }
+
+    & svg {
+      stroke: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:disabled {
+    border-color: $color-disabled;
+    color: $color-disabled;
+  }
 }
 
 .btn--dark .btn__icon {
   color: $color-default-white;
   background-color: $color-cerulean-blue;
+
+  &:disabled {
+    background-color: $color-disabled;
+  }
 }
 
 .btn--light {
   color: $color-default-white;
   border-color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    color: $color-cerulean-blue;
+
+    & .btn__icon {
+      background-color: $color-cerulean-blue;
+    }
+
+    & svg {
+      stroke: $color-default-white;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    color: rgba(49, 109, 194, 0.7);
+  }
 }
 
 .btn--light .btn__icon {
   color: $color-cerulean-blue;
   background-color: $color-default-white;
+
+  & svg {
+    stroke: $color-cerulean-blue;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+  }
 }

@@ -68,9 +68,20 @@
   color: $color-cerulean-blue;
 
   padding: 14px 26px;
-  border: 1px solid $color-cerulean-blue;
+  border: 1px solid $color-transparent;
   background-color: $color-transparent;
   border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    outline: none;
+  }
+}
+
+.news__btn.is-active {
+  border: 1px solid $color-cerulean-blue;
+  opacity: 1;
 }
 
 .news__wrapper {
@@ -149,12 +160,13 @@
     content: "";
     top: -24px;
     left: 0;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     width: 26px;
     height: 26px;
 
-    background-image: url("../img/sprite/angle.svg");
+    background-image: url("../img/sprite/angle-alabaster.svg");
     color: $color-alabaster;
+    fill: currentColor;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;
@@ -163,21 +175,21 @@
       width: 10px;
       height: 10px;
       background-size: 10px;
-      top: 32px;
-      right: -9px;
+      top: -9px;
+      left: 1px;
     }
   }
 
   &::after {
     position: absolute;
     content: "";
-    bottom: 2px;
+    bottom: 0;
     right: -25px;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     width: 26px;
     height: 26px;
 
-    background-image: url("../img/sprite/angle.svg");
+    background-image: url("../img/sprite/angle-alabaster.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;
@@ -186,7 +198,7 @@
       width: 10px;
       height: 10px;
       background-size: 10px;
-      top: 32px;
+      top: 17px;
       right: -9px;
     }
   }
@@ -222,13 +234,13 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: 2px;
+    bottom: 1px;
     right: -25px;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     width: 26px;
     height: 26px;
 
-    background-image: url("../img/sprite/angle.svg");
+    background-image: url("../img/sprite/angle-alabaster.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;
@@ -237,8 +249,8 @@
       width: 10px;
       height: 10px;
       background-size: 10px;
-      top: 32px;
-      right: -9px;
+      top: 13px;
+      right: -9px
     }
   }
 }
@@ -279,13 +291,13 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: 2px;
+    bottom: 0;
     right: -25px;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     width: 26px;
     height: 26px;
 
-    background-image: url("../img/sprite/angle.svg");
+    background-image: url("../img/sprite/angle-alabaster.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;

@@ -72,7 +72,7 @@
     color: $color-charcoal;
 
     background-color: $color-transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba($color-charcoal, 0.3);
     border-radius: 8px;
     outline: none;
     cursor: pointer;
@@ -81,10 +81,10 @@
 
     &:hover,
     &:focus {
-      border-color: $color-default-white;
+      border-color: $color-charcoal;
 
       & + .custom-select__label {
-        color: $color-cerulean-blue;
+        color: $color-charcoal;
       }
     }
 
@@ -165,7 +165,7 @@
     font-size: 14px;
     line-height: 18px;
     width: 80%;
-    color: $color-cerulean-blue;
+    color: $color-charcoal;
 
     text-align: left;
     white-space: nowrap;
@@ -219,10 +219,12 @@
     .custom-select__list {
       visibility: visible;
       opacity: 1;
+      border-radius: 8px 8px 0px 0px;
+      margin-top: 15px;
     }
 
     .custom-select__button {
-      border-color: $color-default-white;
+      border-color: $color-charcoal;
     }
 
     .custom-select__icon {
@@ -230,7 +232,7 @@
     }
 
     .custom-select__label {
-      color: $color-default-white;
+      color: $color-charcoal;
     }
   }
 
@@ -310,6 +312,40 @@
 
     &.is-valid {
       color: #15ab07;
+    }
+  }
+}
+
+.custom-select__text--light {
+  color: $color-default-white;
+}
+
+.custom-select__button--light {
+  color: $color-default-white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  &:hover,
+  &:focus {
+    border-color: $color-default-white;
+
+    & + .custom-select__label {
+      color: $color-default-white;
+    }
+  }
+}
+
+.custom-select__label--light {
+    color: rgba($color-default-white, 0.8);
+}
+
+.custom-select {
+  &.is-open {
+    .custom-select__button--light {
+      border-color: $color-default-white;
+    }
+
+    .custom-select__label--light {
+      color: $color-default-white;
     }
   }
 }

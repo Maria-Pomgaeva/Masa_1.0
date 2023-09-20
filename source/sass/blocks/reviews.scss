@@ -39,6 +39,8 @@
 
 .reviews__wrapper {
   margin-bottom: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @include vp-767 {
     margin-bottom: 30px;
@@ -66,8 +68,6 @@
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
 
-
-
   @include vp-767 {
     padding: 30px 15px;
     gap: 25px;
@@ -81,13 +81,14 @@
 
   @include vp-767 {
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
   }
 }
 
 .reviews__person {
   display: grid;
-  grid-template-columns: 90px auto;
+  grid-template-columns: 90px 80px;
   gap: 15px;
   align-items: center;
 
@@ -122,6 +123,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+  margin: 0;
 }
 
 .reviews__item {

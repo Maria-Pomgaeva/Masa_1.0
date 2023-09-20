@@ -46,6 +46,7 @@
   height: 22px;
   background-color: $color-transparent;
   border: none;
+  border-radius: 50%;
   outline: none;
   color: $color-cerulean-blue;
 
@@ -59,6 +60,26 @@
   & svg {
     width: 10px;
     height: 10px;
+    stroke: $color-cerulean-blue;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+
+    & svg {
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    & svg {
+      stroke: rgba(49, 109, 194, 0.7);
+    }
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
   }
 }
 
@@ -66,7 +87,7 @@
   display: block;
   width: 32px;
   height: 32px;
-  border: none;
+  border: 1px solid $color-transparent;
   border-radius: 50%;
 
   font-size: 16px;
@@ -74,6 +95,12 @@
   line-height: 20px;
   color: $color-cerulean-blue;
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-cerulean-blue;
+    opacity: 1;
+  }
 }
 
 .scrollbar__pagination-btn.is-active {

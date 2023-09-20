@@ -43,6 +43,7 @@
       font-size: 16px;
       line-height: 18px;
       max-width: 570px;
+      max-width: 200px;
     }
   }
 }
@@ -84,6 +85,14 @@
   background-color: $color-cerulean-blue;
   border: 1px solid $color-transparent;
   cursor: pointer;
+
+  @include vp-1199 {
+    right: 30px;
+  }
+
+  @include vp-767 {
+    right: 15px;
+  }
 }
 
 .accordion__button-inner:hover,
@@ -144,10 +153,15 @@
   top: 17%;
   right: 40px;
 
-  // @include vp-767 {
-  //   transform: rotate(180deg);
-  //   top: 22%;
-  // }
+  @include vp-1199 {
+    top: 14%;
+    right: 30px;
+  }
+
+  @include vp-767 {
+    top: 6%;
+    right: 15px;
+  }
 }
 
 .accordion__element.is-active .accordion__button-inner:hover,
@@ -167,7 +181,11 @@
 }
 
 .accordion__element.is-active .accordion__button-inner:active::before {
-  background: $color-cerulean-blue;
+  background: $color-endeavour;
+
+  & .accordion__element {
+    background: $color-endeavour;
+  }
 }
 
 .accordion__element.is-active .accordion__button-inner::after {

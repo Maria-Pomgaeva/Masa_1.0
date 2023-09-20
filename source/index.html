@@ -429,15 +429,15 @@
           <div class="news__container container">
             <h2>Новости и материалы</h2>
             <div class="news__btn-contaner">
-              <button class="news__btn" type="button">Общее</button>
-              <button class="news__btn" type="button">Волонтёрство</button>
-              <button class="news__btn" type="button">Стажировки</button>
-              <button class="news__btn" type="button">Карьера</button>
-              <button class="news__btn" type="button">Путешествия</button>
+              <button class="news__btn" type="button" data-filter="all">Общее</button>
+              <button class="news__btn" type="button" data-filter="volunteering">Волонтёрство</button>
+              <button class="news__btn" type="button" data-filter="internships">Стажировки</button>
+              <button class="news__btn" type="button" data-filter="career">Карьера</button>
+              <button class="news__btn" type="button" data-filter="trips">Путешествия</button>
             </div>
-            <div class="news__swiper swiper">
+            <div class="news__swiper swiper" data-slider="news">
               <div class="news__wrapper swiper-wrapper">
-                <div class="news__slide news__slide--big swiper-slide">
+                <div class="news__slide news__slide--big swiper-slide" data-filter="internships">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-1.webp 1x, img/news/tablet-photo-1@2x.webp 2x">
@@ -463,7 +463,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="news__slide swiper-slide">
+                <div class="news__slide swiper-slide" data-filter="trips">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-2.webp 1x, img/news/tablet-photo-2@2x.webp 2x">
@@ -489,8 +489,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="news__slide swiper-slide">
+                <div class="news__slide swiper-slide" data-filter="volunteering">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-3.webp 1x, img/news/tablet-photo-3@2x.webp 2x">
@@ -516,8 +515,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="news__slide swiper-slide">
+                <div class="news__slide swiper-slide" data-filter="career">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-4.webp 1x, img/news/tablet-photo-4@2x.webp 2x">
@@ -529,10 +527,10 @@
                   <div class="news__wrapper-text">
                     <time class="news__time" datetime="2023-03-10">10/03/2023</time>
                     <div class="news__text-header">
-                      <h3>Новая программа волонтёрства</h3>
+                      <h3>Построй свою карьеру</h3>
                     </div>
                     <div class="news__text">
-                      <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
+                      <p>Ведущие компании  готовы трудоустроить выпускников стажировки</p>
                       <a class="news__text-btn btn btn--min">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
@@ -540,11 +538,10 @@
                           </svg>
                         </span>
                       </a>
+                    </div>
                   </div>
                 </div>
-                </div>
-
-                <div class="news__slide news__slide--big swiper-slide">
+                <div class="news__slide news__slide--big swiper-slide" data-filter="internships">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-1.webp 1x, img/news/tablet-photo-1@2x.webp 2x">
@@ -570,8 +567,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="news__slide swiper-slide">
+                <div class="news__slide swiper-slide" data-filter="trips">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-2.webp 1x, img/news/tablet-photo-2@2x.webp 2x">
@@ -587,7 +583,7 @@
                     </div>
                     <div class="news__text">
                       <p>Какие места посещают наши студенты весной</p>
-                      <a class="news__text-btn bt btn--minn">
+                      <a class="news__text-btn btn btn--min">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -597,8 +593,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="news__slide swiper-slide">
+                <div class="news__slide swiper-slide" data-filter="volunteering">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-3.webp 1x, img/news/tablet-photo-3@2x.webp 2x">
@@ -624,8 +619,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="news__slide swiper-slide">
+                <div class="news__slide swiper-slide" data-filter="career">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-4.webp 1x, img/news/tablet-photo-4@2x.webp 2x">
@@ -637,10 +631,10 @@
                   <div class="news__wrapper-text">
                     <time class="news__time" datetime="2023-03-10">10/03/2023</time>
                     <div class="news__text-header">
-                      <h3>Новая программа волонтёрства</h3>
+                      <h3>Построй свою карьеру</h3>
                     </div>
                     <div class="news__text">
-                      <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
+                      <p>Ведущие компании  готовы трудоустроить выпускников стажировки</p>
                       <a class="news__text-btn btn btn--min">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
@@ -648,11 +642,62 @@
                           </svg>
                         </span>
                       </a>
+                    </div>
                   </div>
                 </div>
+                <div class="news__slide swiper-slide" data-filter="trips">
+                  <div class="news__image">
+                    <picture>
+                      <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-2.webp 1x, img/news/tablet-photo-2@2x.webp 2x">
+                      <source media="(max-width: 1199px)" srcset="img/news/tablet-photo-2.jpg 1x, img/news/tablet-photo-2@2x.jpg 2x">
+                      <source type="image/webp" srcset="img/news/desktop-photo-2.webp 1x, img/news/desktop-photo-2@2x.webp 2x">
+                      <img src="img/news/desktop-photo-2.jpg" srcset="img/news/desktop-photo-2@2x.jpg" width="286" height="400" alt="Новости">
+                    </picture>
+                  </div>
+                  <div class="news__wrapper-text">
+                    <time class="news__time" datetime="2023-03-20">20/03/2023</time>
+                    <div class="news__text-header">
+                      <h3>Путешествуем по Израилю</h3>
+                    </div>
+                    <div class="news__text">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <a class="news__text-btn btn btn--min">
+                        <span class="btn__icon">
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#arrow-btn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="news__slide swiper-slide" data-filter="career">
+                  <div class="news__image">
+                    <picture>
+                      <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-4.webp 1x, img/news/tablet-photo-4@2x.webp 2x">
+                      <source media="(max-width: 1199px)" srcset="img/news/tablet-photo-4.jpg 1x, img/news/tablet-photo-4@2x.jpg 2x">
+                      <source type="image/webp" srcset="img/news/desktop-photo-4.webp 1x, img/news/desktop-photo-4@2x.webp 2x">
+                      <img src="img/news/desktop-photo-4.jpg" srcset="img/news/desktop-photo-4@2x.jpg" width="286" height="400" alt="Новости">
+                    </picture>
+                  </div>
+                  <div class="news__wrapper-text">
+                    <time class="news__time" datetime="2023-03-10">10/03/2023</time>
+                    <div class="news__text-header">
+                      <h3>Построй свою карьеру</h3>
+                    </div>
+                    <div class="news__text">
+                      <p>Ведущие компании  готовы трудоустроить выпускников стажировки</p>
+                      <a class="news__text-btn btn btn--min">
+                        <span class="btn__icon">
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#arrow-btn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-
               <div class="scrollbar news__scrollbar">
                 <div class="scrollbar__pagination news__pagination swiper-pagination"></div>
                 <button class="scrollbar__btn scrollbar__btn--prev news__navigation-btn news__navigation-btn--prev" type="button" aria-label="Предыдущий слайд">
@@ -856,28 +901,28 @@
                 <div class="form" data-form-validate data-callback="base">
                   <form method="post" action="https://echo.htmlacademy.ru">
                     <div class="form__wrapper feedback__wrapper">
-                      <div class="form__input custom-input" data-validate-type="text" data-on-input-validate data-required>
+                      <div class="custom-input custom-input--light" data-validate-type="text" data-on-input-validate data-required>
                         <label for="feedback-name">Имя</label>
                         <input type="text" id="feedback-name" name="user-name">
                       </div>
-                      <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate data-required>
+                      <div class="custom-input custom-input--light" data-validate-type="phone" data-on-input-validate data-required>
                         <label for="feedback-phone">Телефон</label>
                       <input type="tel" id="feedback-phone" name="phone" required autocomplete="off">
                       </div>
-                      <div class="form__input form__input--textarea custom-input custom-input--textarea" data-validate-type="text" data-required>
+                      <div class="custom-input custom-input--light custom-input--textarea" data-validate-type="text" data-required>
                         <label for="user-message">Ваше сообщение</label>
                         <textarea id="user-message" name="user-message"></textarea>
                       </div>
-                      <div class="form__input custom-select open-up" data-select="" data-validate-type="select" data-name="user-city" data-id="city" data-required="true">
-                        <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
-                          <span class="custom-select__text"></span>
+                      <div class="custom-select custom-select--light open-up" data-select="" data-validate-type="select" data-name="user-city" data-id="city" data-required="true">
+                        <button class="custom-select__button custom-select__button--light" type="button" aria-label="Выберите одну из опций">
+                          <span class="custom-select__text custom-select__text--light"></span>
                           <span class="custom-select__icon">
                             <svg width="16" height="16" aria-hidden="true">
                               <use xlink:href="img/sprite.svg#arrow-down"></use>
                             </svg>
                           </span>
                         </button>
-                        <span class="custom-select__label">Выберите город</span>
+                        <span class="custom-select__label custom-select__label--light">Выберите город</span>
                         <ul class="custom-select__list list-reset" role="listbox" data-scroll-lock-scrollable="">
                           <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
                           <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
@@ -885,7 +930,7 @@
                           <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Череповец</li>
                         </ul>
                       </div>
-                      <div class="form__input form__input--checkbox custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                      <div class="custom-toggle custom-toggle--light custom-toggle--checkbox" data-validate-type="checkbox">
                         <label for="feedback-user-agreement">
                           <input type="checkbox" value="user-agreement-1" id="feedback-user-agreement" name="user-agreement">
                           <span>Я согласен на обработку моих персональных данных</span>

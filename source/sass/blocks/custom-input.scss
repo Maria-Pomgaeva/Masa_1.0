@@ -47,11 +47,12 @@
     &:hover,
     &:focus {
       opacity: 1;
+      border-color: $color-charcoal;
     }
 
     &:disabled {
-      background-color: rgba(#ffffff, 0.2);
-      border-color: #ffffff;
+      background-color: rgba($color-default-white, 0.2);
+      border-color: $color-default-white;
       opacity: 0.4;
 
       pointer-events: none;
@@ -125,6 +126,32 @@
 
     &.is-valid {
       color: #15ab07;
+    }
+  }
+}
+
+.custom-input,
+.custom-textarea {
+  &--light {
+    & input,
+    & textarea {
+      border: 1px solid rgba($color-default-white, 0.3);
+      caret-color: $color-default-white;
+      color: $color-default-white;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        border-color: $color-default-white;
+
+        & + label {
+          color: $color-default-white;
+        }
+      }
+    }
+
+    & label {
+      color: rgba($color-default-white, 0.8);
     }
   }
 }

@@ -10,7 +10,8 @@
 
     width: 20px;
     height: 20px;
-    border: 1px solid rgba($color-cerulean-blue, 0.7);
+    border: 1px solid rgba($color-default-white, 0.7);
+    background-color: $color-transparent;
 
     border-radius: 2px;
   }
@@ -67,7 +68,7 @@
     border: 1px solid $color-cerulean-blue;
 
     &::before {
-      background-color: $color-cerulean-blue;
+      background-color: $color-default-white;
     }
   }
 
@@ -91,4 +92,8 @@
       color: #15ab07;
     }
   }
+}
+
+.custom-toggle--light {
+
 }

@@ -103,6 +103,19 @@
 .contacts__item-link {
   margin: 0;
   color: $color-default-white;
+  text-decoration-line: underline;
+  text-decoration-color: $color-transparent;
+  text-underline-offset: 3px;
+
+  &:hover,
+  &:focus {
+    text-decoration-color: $color-default-white;
+  }
+
+  &:active {
+    text-decoration-color: $color-transparent;
+    opacity: 0.8;
+  }
 }
 
 .contacts__map {

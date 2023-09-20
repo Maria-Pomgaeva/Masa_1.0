@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {menuOpen} from './modules/menu-open';
 import {initAccordions} from './modules/accordions/init-accordion';
 import {initSwiper} from './modules/swiper';
+import {initNews} from './modules/news';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {initMap} from './modules/map';
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     menuOpen();
     initAccordions();
     initSwiper();
+    initNews();
     initMap();
     const form = new Form();
     window.form = form;
