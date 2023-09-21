@@ -2799,7 +2799,7 @@ button,
   transform: rotate(-90deg);
   width: 26px;
   height: 26px;
-  background-image: url("../img/sprite.svg#angle");
+  background-image: url("../img/sprite/angle.svg");
   color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
@@ -2883,7 +2883,7 @@ button,
   right: -25px;
   width: 26px;
   height: 26px;
-  background-image: url("../../img/sprite.svg#angle");
+  background-image: url("../img/sprite/angle.svg");
   color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
@@ -3958,8 +3958,8 @@ button,
   transform: rotate(-90deg);
   width: 26px;
   height: 26px;
-  -webkit-mask-image: url("../img/sprite.svg#angle");
-  mask-image: url("../img/sprite.svg#angle");
+  -webkit-mask-image: url("../img/sprite/angle.svg");
+  mask-image: url("../img/sprite/angle.svg");
   color: #ffffff;
   background-repeat: no-repeat;
   background-position: center;
@@ -4221,7 +4221,7 @@ button,
   transform: rotate(0deg);
   width: 26px;
   height: 26px;
-  background-image: url("../img/sprite.svg#angle");
+  background-image: url("../img/sprite/angle-alabaster.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
@@ -4241,7 +4241,7 @@ button,
   transform: rotate(0deg);
   width: 26px;
   height: 26px;
-  background-image: url("../img/sprite.svg#angle");
+  background-image: url("../img/sprite/angle-alabaster.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
@@ -4278,7 +4278,7 @@ button,
   transform: rotate(0deg);
   width: 26px;
   height: 26px;
-  background-image: url("../img/sprite.svg#angle");
+  background-image: url("../img/sprite/angle-alabaster.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
@@ -4326,7 +4326,7 @@ button,
   transform: rotate(0deg);
   width: 26px;
   height: 26px;
-  background-image: url("../img/sprite.svg#angle");
+  background-image: url("../img/sprite/angle-alabaster.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
@@ -5398,7 +5398,7 @@ button,
     right: -9px;
     width: 10px;
     height: 10px;
-    background-image: url("../img/sprite.svg#angle");
+    background-image: url("../img/sprite/angle.svg");
     color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
@@ -5506,6 +5506,10 @@ button,
     padding-top: 67px;
   }
 
+  .program__head {
+    margin-bottom: 35px;
+  }
+
   .program__head h2 {
     font-size: 20px;
     line-height: 20px;
@@ -5515,6 +5519,14 @@ button,
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
+    position: absolute;
+    bottom: -30px;
+    left: 15px;
+  }
+
+  .program__swiper {
+    padding-top: 55px;
+    margin-top: 55px;
   }
 
   .program__slide {
@@ -5558,9 +5570,9 @@ button,
   }
 
   .program__navigation {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+    position: absolute;
+    bottom: 472px;
+    right: 0;
   }
 
   .info__container {

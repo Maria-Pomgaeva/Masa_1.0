@@ -17,6 +17,10 @@
   justify-content: space-between;
   margin-bottom: 40px;
 
+  @include vp-767 {
+    margin-bottom: 35px;
+  }
+
   & h2 {
     font-size: 50px;
     font-weight: 400;
@@ -39,6 +43,16 @@
 .program__head-btn {
   @include vp-767 {
     order: 1;
+    position: absolute;
+    bottom: -30px;
+    left: 15px;
+  }
+}
+
+.program__swiper {
+  @include vp-767 {
+    padding-top: 55px;
+    margin-top: 55px;
   }
 }
 
@@ -142,7 +156,7 @@
     width: 26px;
     height: 26px;
 
-    mask-image: url("../img/sprite.svg#angle");
+    mask-image: url("../img/sprite/angle.svg");
     color: $color-default-white;
     background-repeat: no-repeat;
     background-position: center;
@@ -210,6 +224,8 @@
 
 .program__navigation {
   @include vp-767 {
-    order: 1;
+    position: absolute;
+    bottom: 472px;
+    right: 0;
   }
 }
