@@ -11,19 +11,12 @@
 }
 
 .reviews__container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-
-  @include vp-767 {
-    gap: 30px;
-  }
-
   & h2 {
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
     color: $color-cerulean-blue;
+
     margin: 0;
 
     @include vp-1199 {
@@ -39,8 +32,6 @@
 
 .reviews__wrapper {
   margin-bottom: 40px;
-  max-width: 1440px;
-  margin: 0 auto;
 
   @include vp-767 {
     margin-bottom: 30px;
@@ -57,14 +48,15 @@
 
 .reviews__card {
   display: flex;
-  padding: 50px 50px 43px;
   flex-direction: column;
-  background-color: $color-transparent;
   gap: 30px;
+  padding: 50px 50px 43px;
+
   width: 100%;
   height: 100%;
   overflow: hidden;
 
+  background-color: $color-transparent;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
 
@@ -106,6 +98,7 @@
     font-size: 18px;
     line-height: 24px;
     color: $color-cerulean-blue;
+
     margin: 0;
 
     @include vp-1199 {
@@ -123,6 +116,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+
   margin: 0;
 }
 
@@ -133,12 +127,14 @@
     letter-spacing: 0.12px;
     text-transform: uppercase;
     color: $color-cerulean-blue;
+
     margin-bottom: 11px;
   }
 
   & dd {
     font-size: 14px;
     line-height: 18px;
+
     margin: 0;
 
     @include vp-1199 {
@@ -160,6 +156,7 @@
     font-weight: 400;
     line-height: 26px;
     color: $color-cerulean-blue;
+
     margin: 0 0 25px;
 
     @include vp-1199 {
@@ -170,6 +167,7 @@
     @include vp-767 {
       font-size: 16px;
       line-height: 18px;
+
       margin-bottom: 20px;
     }
   }
@@ -177,6 +175,7 @@
   & p {
     font-size: 16px;
     line-height: 26px;
+
     margin: 0;
 
     @include vp-1199 {

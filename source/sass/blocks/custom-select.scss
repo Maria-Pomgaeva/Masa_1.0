@@ -219,8 +219,12 @@
     .custom-select__list {
       visibility: visible;
       opacity: 1;
-      border-radius: 8px 8px 0px 0px;
+      border-radius: 8px;
       margin-top: 15px;
+
+      &--light {
+        border-color: $color-default-white;
+      }
     }
 
     .custom-select__button {
@@ -262,17 +266,6 @@
       }
     }
   }
-
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 
   &--placeholder {
     .custom-select__label {

@@ -47,7 +47,7 @@ export const initSwiper = function () {
     },
 
     scrollbar: {
-      el: '.program__scrollbar',
+      el: '.program__bar',
       draggable: true,
     },
 
@@ -71,6 +71,51 @@ export const initSwiper = function () {
   });
 
   // eslint-disable-next-line
+  const newsSwiper = new window.Swiper('.news__swiper', {
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      bulletActiveClass: 'is-active',
+      bulletClass: 'news__pagination-btn scrollbar__pagination-btn',
+      renderBullet(index, className) {
+        return '<button class="' + className + '" type="button">' + (index + 1) + '</button>';
+      },
+    },
+    spaceBetween: 20,
+    slidesPerView: 1,
+    allowTouchMove: true,
+    grid: {
+      rows: 2,
+      fill: 'row',
+    },
+
+    navigation: {
+      nextEl: '.news__navigation-btn--next',
+      prevEl: '.news__navigation-btn--prev',
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 30,
+        allowTouchMove: true,
+        slidesPerView: 2,
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
+      },
+
+      1200: {
+        spaceBetween: 32,
+        allowTouchMove: false,
+        slidesPerView: 'auto',
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+  });
+
+  // eslint-disable-next-line
   const swiperReviews = new window.Swiper('.reviews__swiper', {
 
     navigation: {
@@ -79,14 +124,14 @@ export const initSwiper = function () {
     },
 
     scrollbar: {
-      el: '.reviews__scrollbar',
+      el: '.reviews__bar',
       draggable: true,
     },
 
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 15,
+        spaceBetween: 20,
       },
       768: {
         spaceBetween: 30,

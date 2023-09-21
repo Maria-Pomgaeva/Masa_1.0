@@ -1,20 +1,25 @@
 .map {
-  width: 1240px;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
   height: 500px;
+  overflow: hidden;
+
+  border-radius: 16px;
+}
+
+.map__block {
+  width: 100%;
+  height: 100%;
+
   border-radius: inherit;
   pointer-events: none;
-
-  @include vp-1199 {
-    width: 678px;
-    height: 500px;
-  }
-
-  @include vp-767 {
-    width: 290px;
-    height: 240px;
-  }
 
   & .leaflet-marker-icon {
     pointer-events: none;
   }
 }
+
+
+

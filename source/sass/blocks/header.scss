@@ -1,7 +1,11 @@
 .header {
-  padding: 30px 0 0;
-  margin-bottom: -90px;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 10;
+
+  width: 100%;
+  padding: 30px 0 0;
 
   @include vp-767 {
     padding: 20px 0;
@@ -16,8 +20,10 @@
 .header__toggle {
   position: relative;
   width: 134px;
-  border: 1px solid $color-cerulean-blue;
   padding: 22px 70px 22px 20px;
+  margin-left: auto;
+
+  border: 1px solid $color-cerulean-blue;
   background-color: $color-default-white;
 
   color: $color-cerulean-blue;
@@ -34,6 +40,7 @@
   border-color: $color-transparent;
   color: $color-default-white;
   background-color: $color-cerulean-blue;
+  z-index: 20;
 }
 
 .header__toggle-range {
@@ -64,10 +71,10 @@
   &::after {
     content: "";
     position: absolute;
+    right: 0;
 
     width: 18px;
     height: 1px;
-    right: 0;
 
     background-color: $color-default-white;
 

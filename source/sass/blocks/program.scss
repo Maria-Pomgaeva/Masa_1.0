@@ -11,11 +11,6 @@
   }
 }
 
-.program__container {
-  display: flex;
-  flex-direction: column;
-}
-
 .program__head {
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +22,7 @@
     font-weight: 400;
     line-height: 50px;
     color: $color-cerulean-blue;
+
     margin: 0;
 
     @include vp-1199 {
@@ -64,29 +60,33 @@
   &::before {
     position: absolute;
     content: "";
-    inset: 0;
     z-index: 1;
+
     background-color: rgba(49, 109, 194, 0.2);
     border-radius: 12px;
+
+    inset: 0;
   }
 }
 
 .program__image img {
   width: 100%;
   height: auto;
+
   border-radius: 12px;
   background-color: $color-cerulean-blue;
 }
 
 .program__text-container {
   position: absolute;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  z-index: 2;
-
   max-height: 420px;
   padding: 20px;
+
   inset: 0;
 
   @include vp-767 {
@@ -96,11 +96,12 @@
 
 .program__text-header {
   position: relative;
-  background-color: $color-default-white;
-  max-width: 194px;
 
+  max-width: 194px;
   margin-bottom: -2px;
   padding: 12px 19px 1px;
+
+  background-color: $color-default-white;
   border-radius: 12px 12px 0 0;
 
   @include vp-1199 {
@@ -118,6 +119,7 @@
     font-weight: 400;
     line-height: 26px;
     color: $color-cerulean-blue;
+
     margin: 0;
 
     @include vp-1199 {
@@ -136,22 +138,23 @@
     top: 12px;
     right: -25px;
     transform: rotate(-90deg);
+
     width: 26px;
     height: 26px;
 
-    background-image: url("../img/sprite/angle.svg");
-    fill: currentColor;
+    mask-image: url("../img/sprite.svg#angle");
     color: $color-default-white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px;
 
     @include vp-767 {
+      top: 32px;
+      right: -9px;
+
       width: 10px;
       height: 10px;
       background-size: 10px;
-      top: 32px;
-      right: -9px;
     }
   }
 }
@@ -181,6 +184,7 @@
   & p {
     font-size: 14px;
     line-height: 18px;
+
     margin: 0;
 
     @include vp-1199 {

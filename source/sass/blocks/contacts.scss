@@ -1,7 +1,8 @@
 .contacts {
   padding: 120px 100px;
-  background-color: $color-cerulean-blue;
   margin: 120px 0 0;
+
+  background-color: $color-cerulean-blue;
 
   @include vp-1199 {
     padding: 100px 45px;
@@ -24,6 +25,7 @@
   justify-content: space-between;
   margin-bottom: 40px;
   padding-bottom: 40px;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: $color-default-white;
 
@@ -39,6 +41,7 @@
     font-weight: 400;
     line-height: 50px;
     color: $color-default-white;
+
     margin: 0;
 
     @include vp-1199 {
@@ -57,6 +60,7 @@
   grid-template-columns: 290px auto auto;
   justify-content: end;
   gap: 51px;
+
   margin: 0;
 
   @include vp-1199 {
@@ -77,6 +81,7 @@
     letter-spacing: 0.12px;
     text-transform: uppercase;
     opacity: 0.8;
+
     margin: 0 0 24px;
 
     @include vp-767 {
@@ -88,6 +93,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
+
     margin: 0;
 
     @include vp-1199 {
@@ -115,18 +121,5 @@
   &:active {
     text-decoration-color: $color-transparent;
     opacity: 0.8;
-  }
-}
-
-.contacts__map {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  border-radius: 16px;
-
-  @include vp-767 {
-    height: 240px;
   }
 }

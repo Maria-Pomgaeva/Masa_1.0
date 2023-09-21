@@ -1,14 +1,16 @@
 .scrollbar {
   position: relative;
+  z-index: 10;
+
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 52px;
-  z-index: 10;
 }
 
 .scrollbar .swiper-pagination {
   position: static;
+
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -45,8 +47,8 @@
   width: 22px;
   height: 22px;
   background-color: $color-transparent;
-  border: none;
   border-radius: 50%;
+  border: none;
   outline: none;
   color: $color-cerulean-blue;
 

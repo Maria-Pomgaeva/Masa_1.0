@@ -21,8 +21,8 @@
     <div class="wrapper">
       <header class="header" data-header>
         <div class="header__container container">
-          <div class="header__wrapper">
-            <a class="header__logo logo">
+          <div class="header__wrapper nav">
+            <a class="header__logo logo"  href="index.html">
               <svg width="28" height="28" role="img" aria-hidden="true" aria-label="Логотип Masa" focusable="false">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
@@ -32,78 +32,76 @@
                 <span class="header__toggle-icon"></span>
               </span>
             </button>
-            <nav class="header__nav nav">
-              <div class="nav__inner">
-                <div class="nav__wrapper">
-                  <div class="nav__overlay" data-overlay></div>
-                  <ul class="nav__menu list-reset" data-accordion="parent">
-                    <li class="nav__item">
-                      <a class="nav__link" href="#about" data-menu-link>О проекте</a>
-                    </li>
-                    <li class="nav__item" data-accordion="element">
-                      <button class="nav__link-button" type="button" data-accordion="button">
-                        <span>Программы</span>
-                        <svg width="12" height="12" aria-hidden="true">
-                          <use xlink:href="#arrow-down"></use>
-                        </svg>
-                      </button>
-                      <div class="nav__drop-container" data-accordion="content">
-                        <ul class="nav__drop-list list-reset">
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#program" data-menu-link>Стажировки</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#program" data-menu-link>Волонтёрство</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#program" data-menu-link>Учеба</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#program" data-menu-link>Религия</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="#info" data-menu-link>Как поехать</a>
-                    </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="#reviews" data-menu-link>Отзывы</a>
-                    </li>
-                    <li class="nav__item" data-accordion="element">
-                      <button class="nav__link-button" type="button" data-accordion="button">
-                        <span>Новости</span>
-                        <svg width="12" height="12" aria-hidden="true">
-                          <use xlink:href="#arrow-down"></use>
-                        </svg>
-                      </button>
-                      <div class="nav__drop-container" data-accordion="content">
-                        <ul class="nav__drop-list">
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#news">Общее</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#news">Волонтёрство</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#news">Стажировки</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#news">Карьера</a>
-                          </li>
-                          <li class="nav__drop-item">
-                            <a class="nav__drop-link" href="#news">Путешествия</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="nav__item">
-                      <a class="nav__link" href="#contacts" data-menu-link>Контакты</a>
-                    </li>
-                  </ul>
-                </div>
+            <div class="nav__inner">
+              <div class="nav__wrapper">
+                <div class="nav__overlay" data-overlay></div>
+                <ul class="nav__menu list-reset" data-accordion="parent">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#about" data-menu-link>О проекте</a>
+                  </li>
+                  <li class="nav__item" data-accordion="element">
+                    <button class="nav__link-button" type="button" data-accordion="button">
+                      <span>Программы</span>
+                      <svg width="12" height="12" aria-hidden="true">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </button>
+                    <div class="nav__drop-container" data-accordion="content">
+                      <ul class="nav__drop-list list-reset">
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#program" data-menu-link>Стажировки</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#program" data-menu-link>Волонтёрство</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#program" data-menu-link>Учеба</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#program" data-menu-link>Религия</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#info" data-menu-link>Как поехать</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#reviews" data-menu-link>Отзывы</a>
+                  </li>
+                  <li class="nav__item" data-accordion="element">
+                    <button class="nav__link-button" type="button" data-accordion="button">
+                      <span>Новости</span>
+                      <svg width="12" height="12" aria-hidden="true">
+                        <use xlink:href="#arrow-down"></use>
+                      </svg>
+                    </button>
+                    <div class="nav__drop-container" data-accordion="content">
+                      <ul class="nav__drop-list list-reset">
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#news" data-menu-link>Общее</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#news" data-menu-link>Волонтёрство</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#news" data-menu-link>Стажировки</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#news" data-menu-link>Карьера</a>
+                        </li>
+                        <li class="nav__drop-item">
+                          <a class="nav__drop-link" href="#news" data-menu-link>Путешествия</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#contacts" data-menu-link>Контакты</a>
+                  </li>
+                </ul>
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </header>
@@ -288,7 +286,7 @@
                     </div>
                     <div class="program__text">
                       <p>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</p>
-                      <a class="program__btn btn btn--min">
+                      <a class="program__btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -315,7 +313,7 @@
                     </div>
                     <div class="program__text">
                       <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
-                      <a class="program__btn btn btn--min">
+                      <a class="program__btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -342,7 +340,7 @@
                     </div>
                     <div class="program__text">
                       <p>Получите образование и&nbsp;измените свое будущее.</p>
-                      <a class="program__btn btn btn--min">
+                      <a class="program__btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -369,7 +367,7 @@
                     </div>
                     <div class="program__text">
                       <p>Получите образование и&nbsp;измените свое будущее.</p>
-                      <a class="program__btn btn btn--min">
+                      <a class="program__btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -381,7 +379,7 @@
                 </div>
               </div>
               <div class="scrollbar program__scrollbar">
-                <div class="scrollbar__bar swiper-scrollbar program__bar"></div>
+                <div class="scrollbar__bar program__bar"></div>
                 <div class="scrollbar__navigation">
                   <button class="scrollbar__btn scrollbar__btn--prev program__navigation-btn program__navigation-btn--prev" type="button" aria-label="Предыдущий слайд">
                     <svg width="10" height="10" aria-hidden="true">
@@ -437,7 +435,7 @@
             </div>
             <div class="news__swiper swiper" data-slider="news">
               <div class="news__wrapper swiper-wrapper">
-                <div class="news__slide news__slide--big swiper-slide" data-filter="internships">
+                <div class="news__slide swiper-slide" data-filter="internships">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-1.webp 1x, img/news/tablet-photo-1@2x.webp 2x">
@@ -453,7 +451,7 @@
                     </div>
                     <div class="news__text">
                       <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -479,7 +477,7 @@
                     </div>
                     <div class="news__text">
                       <p>Какие места посещают наши студенты весной</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -505,7 +503,7 @@
                     </div>
                     <div class="news__text">
                       <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -531,7 +529,7 @@
                     </div>
                     <div class="news__text">
                       <p>Ведущие компании  готовы трудоустроить выпускников стажировки</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -541,7 +539,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="news__slide news__slide--big swiper-slide" data-filter="internships">
+                <div class="news__slide swiper-slide" data-filter="internships">
                   <div class="news__image">
                     <picture>
                       <source media="(max-width: 1199px)" type="image/webp" srcset="img/news/tablet-photo-1.webp 1x, img/news/tablet-photo-1@2x.webp 2x">
@@ -557,7 +555,7 @@
                     </div>
                     <div class="news__text">
                       <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -583,7 +581,7 @@
                     </div>
                     <div class="news__text">
                       <p>Какие места посещают наши студенты весной</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -609,7 +607,7 @@
                     </div>
                     <div class="news__text">
                       <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -635,7 +633,7 @@
                     </div>
                     <div class="news__text">
                       <p>Ведущие компании  готовы трудоустроить выпускников стажировки</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -661,7 +659,7 @@
                     </div>
                     <div class="news__text">
                       <p>Какие места посещают наши студенты весной</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -687,7 +685,7 @@
                     </div>
                     <div class="news__text">
                       <p>Ведущие компании  готовы трудоустроить выпускников стажировки</p>
-                      <a class="news__text-btn btn btn--min">
+                      <a class="news__text-btn btn btn--min" href="#">
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="img/sprite.svg#arrow-btn"></use>
@@ -812,7 +810,60 @@
                     </div>
                   </div>
                 </div>
-
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__card">
+                    <div class="reviews__header">
+                      <div class="reviews__person">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/desktop-photo-2.webp 1x, img/reviews/desktop-photo-2@2x.webp 2x">
+                          <img src="img/reviews/desktop-photo-2.jpg" srcset="img/reviews/desktop-photo-2@2x.jpg" width="90" height="90" alt="Коментатор">
+                        </picture>
+                        <p>Давид Иммервар</p>
+                      </div>
+                      <dl class="reviews__detalis">
+                        <div class="reviews__item">
+                          <dt>Программа</dt>
+                          <dd>Volunteer Chance</dd>
+                        </div>
+                        <div class="reviews__item">
+                          <dt>Дата</dt>
+                          <dd>Лето 2022</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <div class="reviews__text">
+                      <h3>Благодаря опыту стажировки я&nbsp;узнал так много нового о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.</h3>
+                      <p>Каждый день был возможностью оказать ощутимое влияние на&nbsp;жизнь других людей. Я&nbsp;бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и&nbsp;незабываемый опыт. Организация была на&nbsp;высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__card">
+                    <div class="reviews__header">
+                      <div class="reviews__person">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/desktop-photo-1.webp 1x, img/reviews/desktop-photo-1@2x.webp 2x">
+                          <img src="img/reviews/desktop-photo-1.jpg" srcset="img/reviews/desktop-photo-1@2x.jpg" width="90" height="90" alt="Коментатор">
+                        </picture>
+                        <p>Сара Аврахам</p>
+                      </div>
+                      <dl class="reviews__detalis">
+                        <div class="reviews__item">
+                          <dt>Программа</dt>
+                          <dd>Masa Art Challenge</dd>
+                        </div>
+                        <div class="reviews__item">
+                          <dt>Дата</dt>
+                          <dd>Осень 2022</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <div class="reviews__text">
+                      <h3>Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один из&nbsp;самых незабываемых опытов в&nbsp;жизни!</h3>
+                      <p>Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и&nbsp;значимой работы действительно отличает её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую огромную благодарность за&nbsp;предоставленную мне возможность.</p>
+                    </div>
+                  </div>
+                </div>
                 <div class="reviews__slide swiper-slide">
                   <div class="reviews__card">
                     <div class="reviews__header">
@@ -841,9 +892,8 @@
                   </div>
                 </div>
               </div>
-
               <div class="scrollbar reviews__scrollbar">
-                <div class="scrollbar__bar swiper-scrollbar reviews__bar"></div>
+                <div class="scrollbar__bar reviews__bar"></div>
                 <div class="scrollbar__navigation reviews__navigation">
                   <button class="scrollbar__btn scrollbar__btn--prev reviews__navigation-btn reviews__navigation-btn--prev" type="button" aria-label="Предыдущий слайд">
                     <svg width="10" height="10" aria-hidden="true">
@@ -923,7 +973,7 @@
                           </span>
                         </button>
                         <span class="custom-select__label custom-select__label--light">Выберите город</span>
-                        <ul class="custom-select__list list-reset" role="listbox" data-scroll-lock-scrollable="">
+                        <ul class="custom-select__list custom-select__list--light list-reset" role="listbox" data-scroll-lock-scrollable="">
                           <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
                           <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
                           <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Владивосток</li>
@@ -954,7 +1004,7 @@
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__nav">
-            <a class="footer__logo logo" href="#index">
+            <a class="footer__logo logo" href="index.html">
               <svg width="28" height="28" role="img" aria-hidden="true" aria-label="Логотип Masa" focusable="false">
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
@@ -982,21 +1032,21 @@
           </div>
           <ul class="footer__social-list list-reset">
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link footer__social-link--vk" aria-label="Вконтакте">
+              <a class="footer__social-link footer__social-link--vk" href="#" aria-label="Вконтакте">
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite.svg#social-link-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link footer__social-link--ok" aria-label="Однокласники">
+              <a class="footer__social-link footer__social-link--ok" href="#" aria-label="Однокласники">
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite.svg#social-link-ok"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link footer__social-link--reddit" aria-label="Редит">
+              <a class="footer__social-link footer__social-link--reddit" href="#" aria-label="Редит">
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite.svg#social-link-reddit"></use>
                 </svg>
@@ -1005,7 +1055,7 @@
           </ul>
           <div class="footer__bottom-text">
             <p>Masa &copy;&nbsp;2023 Все права защищены</p>
-            <a href="#" class="footer__bottom-link" aria-label="конфиденциальность">Политика конфиденциальности</a>
+            <a class="footer__bottom-link" href="#" aria-label="конфиденциальность">Политика конфиденциальности</a>
           </div>
 
         </div>
@@ -1013,7 +1063,6 @@
     </div>
 
     <!-- Модалка -->
-
     <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
@@ -1072,7 +1121,6 @@
         </div>
       </div>
     </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

@@ -67,7 +67,7 @@
     width: 26px;
     height: 26px;
 
-    background-image: url("../img/sprite/angle.svg");
+    background-image: url("../img/sprite.svg#angle");
     color: $color-default-white;
     background-repeat: no-repeat;
     background-position: center;
@@ -86,6 +86,7 @@
 .promo__pagination-bullet {
   width: 10px;
   height: 10px;
+  padding: 0;
 
   border: 1px solid $color-cerulean-blue;
   border-radius: 50%;
@@ -107,9 +108,7 @@
 .promo__container-content {
   display: flex;
   align-items: flex-end;
-
   min-height: 800px;
-
   padding-top: 84px;
   padding-bottom: 60px;
 
@@ -145,6 +144,7 @@
     font-weight: 400;
     line-height: 62px;
     color: $color-cerulean-blue;
+
     margin: 0;
 
     @include vp-1199 {
@@ -175,9 +175,8 @@
   padding: 0 50px 35px 50px;
 
   @include vp-1199 {
-    padding: 0 40px 35px 40px;
-
     max-width: 91.3%;
+    padding: 0 40px 35px 40px;
   }
 
   @include vp-767 {
@@ -191,6 +190,7 @@
     color: $color-charcoal;
     font-size: 16px;
     line-height: 26px;
+
     margin: 0;
 
     @include vp-1199 {
@@ -211,27 +211,27 @@
   width: 26px;
   height: 26px;
 
-  background-image: url("../img/sprite/angle.svg");
+  background-image: url("../../img/sprite.svg#angle");
   color: $color-default-white;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px;
 
   @include vp-767 {
+    right: 21px;
+
     width: 10px;
     height: 10px;
     background-size: 10px;
-    top: 1px;
-    right: 21px;
   }
 }
 
 .promo__text-content {
   @include vp-767 {
-    background-color: $color-default-white;
-    padding: 0 14px 15px 14px;
-    border-radius: 0 0 14px 0;
     max-width: 260px;
+    padding: 0 14px 15px 14px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 0;
   }
 }
 
@@ -250,10 +250,11 @@
       content: "";
       top: 0;
       right: -9px;
+
       width: 10px;
       height: 10px;
 
-      background-image: url("../img/sprite/angle.svg");
+      background-image: url("../img/sprite.svg#angle");
       color: $color-default-white;
       background-repeat: no-repeat;
       background-position: center;

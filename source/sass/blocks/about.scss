@@ -56,7 +56,6 @@
   }
 }
 
-
 .about__text-second {
   max-width: 520px;
 
@@ -137,7 +136,7 @@
   gap: 20px;
   align-items: center;
 
-  border: 1px solid #f0efe9;
+  border: 1px solid $color-alabaster;
   border-radius: 16px;
 
   margin: 22px 0 0 20px;
@@ -180,7 +179,7 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
-    color: #f0efe9;
+    color: $color-alabaster;
     margin: 0;
 
     @include vp-767 {
