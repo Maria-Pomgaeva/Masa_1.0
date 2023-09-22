@@ -2,31 +2,40 @@
   padding: 120px 0 0;
 
   @include vp-1199 {
-    padding-top: 100px;
+    padding-top: 94px;
   }
 
   @include vp-767 {
-    padding-top: 67px;
+    padding-top: 64px;
   }
 }
 
 .about__container {
   display: grid;
-  grid-template-columns: 480px 1fr;
-  gap: 60px 160px;
+  grid-template-columns: 500px 1fr;
+  gap: 60px 137px;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
 .about__text-main {
+  @include vp-1199 {
+    max-width: 500px;
+  }
+
+  @include vp-767 {
+    max-width: 280px;
+  }
+
   & h2 {
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
     color: $color-cerulean-blue;
-    margin: 0 0 43px;
+    margin: 5px 0 26px;
 
     @include vp-1199 {
       font-size: 34px;
@@ -35,7 +44,7 @@
     @include vp-767 {
       font-size: 20px;
       line-height: 20px;
-      margin-bottom: 21px;
+      margin-bottom: 13px;
     }
   }
 
@@ -57,18 +66,28 @@
 }
 
 .about__text-second {
-  max-width: 520px;
+  max-width: 500px;
+
+  @include vp-1199 {
+    max-width: 520px;
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 9px;
+  }
 
   & h3 {
     font-size: 32px;
     font-weight: 400;
     line-height: 36px;
     color: $color-cerulean-blue;
-    margin: 0;
+    margin: -4px 0 0;
 
     @include vp-1199 {
       font-size: 28px;
       line-height: 28px;
+      margin: 0;
     }
 
     @include vp-767 {
@@ -81,17 +100,27 @@
     font-size: 16px;
     line-height: 26px;
     margin: 0;
-    padding: 40px 0;
+    padding: 34px 0;
 
     @include vp-1199 {
       font-size: 16px;
-      line-height: 26px;
+      line-height: 20px;
+      padding: 20px 0 36px;
     }
 
     @include vp-767 {
       font-size: 14px;
       line-height: 20px;
+      padding: 11px 0 26px;
     }
+  }
+}
+
+.about__btn {
+  padding-right: 80px;
+
+  @include vp-767 {
+    padding-right: 56px;
   }
 }
 
@@ -125,7 +154,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1px;
   }
 }
 
@@ -166,6 +195,8 @@
       font-size: 20px;
       line-height: 22px;
       letter-spacing: 0.2px;
+
+      margin-bottom: -5px;
     }
 
     @include vp-767 {

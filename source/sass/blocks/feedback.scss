@@ -33,14 +33,18 @@
   z-index: 1;
   max-width: 498px;
   height: 100%;
-  padding: 83px 74px 31px;
+  padding: 83px 74px 50px;
   color: $color-default-white;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
 
   @include vp-1199 {
     max-width: 442px;
-    padding: 60px 45px 27px;
+    padding: 60px 45px 59px;
+  }
+
+  @include vp-767 {
+    padding: 53px 15px 52px;
   }
 
   & h2 {
@@ -48,20 +52,20 @@
     font-weight: 400;
     line-height: 36px;
 
-    margin: 0 0 38px;
+    margin: 0 0 25px;
 
     @include vp-1199 {
       font-size: 28px;
       line-height: 28px;
 
-      margin-bottom: 35px;
+      margin-bottom: 28px;
     }
 
     @include vp-767 {
       font-size: 18px;
       line-height: 22px;
 
-      margin-bottom: 26px;
+      margin-bottom: 15px;
     }
   }
 
@@ -70,12 +74,12 @@
     line-height: 26px;
     opacity: 0.9;
 
-    margin: 0 0 30px;
+    margin: 0 0 -7px;
 
     @include vp-1199 {
       line-height: 20px;
 
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     @include vp-767 {

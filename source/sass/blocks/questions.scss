@@ -1,5 +1,5 @@
 .questions {
-  padding: 120px 0 0;
+  padding: 124px 0 0;
 
   @include vp-1199 {
     padding-top: 100px;
@@ -14,14 +14,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 65px;
 
   @include vp-1199 {
     gap: 40px;
   }
 
   @include vp-767 {
-    gap: 30px;
+    gap: 33px;
   }
 
   & h2 {

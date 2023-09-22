@@ -1,8 +1,15 @@
 .info {
-  margin-top: 120px;
-  padding: 120px 0 107px;
+  padding: 125px 0 107px;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 98px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 70px 0 67px;
+  }
 }
 
 .info__container {
@@ -29,19 +36,19 @@
     font-weight: 400;
     line-height: 50px;
 
-    margin: 0 0 42px;
+    margin: 0 0 27px;
 
     @include vp-1199 {
       font-size: 34px;
 
-      margin-bottom: 44px;
+      margin-bottom: 28px;
     }
 
     @include vp-767 {
       font-size: 20px;
       line-height: 20px;
 
-      margin-bottom: 21px;
+      margin-bottom: 13px;
     }
   }
 
@@ -50,18 +57,28 @@
     font-weight: 400;
     line-height: 36px;
 
-    margin: 0 0 46px;
+    margin: 3px 0 35px;
 
     @include vp-1199 {
       font-size: 28px;
       line-height: 28px;
 
-      margin-bottom: 30px;
+      margin: 6px 0 27px;
+
+      & br {
+        display: none;
+      }
     }
 
     @include vp-767 {
       font-size: 18px;
       line-height: 22px;
+
+      margin-bottom: 20px;
+
+      & br {
+        display: block;
+      }
     }
   }
 
@@ -70,21 +87,24 @@
     line-height: 26px;
 
     padding: 0;
-    margin: 0 0 40px;
+    margin: 0 0 35px;
 
     @include vp-1199 {
       line-height: 20px;
+
+      max-width: 530px;
     }
 
     @include vp-767 {
       font-size: 14px;
+      margin: 0 0 25px;
     }
   }
 }
 
 .info__image img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 38px;
   background-color: $color-endeavour;
 }
 
@@ -108,9 +128,10 @@
 .info__item {
   position: relative;
   margin: 15px 0 0 20px;
-  padding: 30px 25px;
+  padding: 23px;
   border-radius: 16px;
   border: 1px solid #f0efe9;
+  max-width: 79%;
 
   font-size: 16px;
   font-weight: 400;
@@ -118,12 +139,14 @@
 
   @include vp-1199 {
     line-height: 20px;
+    max-width: 94%;
+    padding: 25px 23px;
   }
 
   @include vp-767 {
     font-size: 14px;
     margin: 5px 0 0 15px;
-    padding: 24px 25px;
+    padding: 18px 25px;
   }
 }
 

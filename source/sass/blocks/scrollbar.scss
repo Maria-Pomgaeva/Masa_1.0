@@ -81,7 +81,8 @@
   }
 
   &:disabled {
-    background-color: $color-disabled;
+    stroke: $color-disabled;
+    background-color: $color-transparent;
   }
 }
 

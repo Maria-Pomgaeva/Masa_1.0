@@ -20,7 +20,7 @@
 .header__toggle {
   position: relative;
   width: 134px;
-  padding: 22px 70px 22px 20px;
+  padding: 20px 70px 20px 20px;
   margin-left: auto;
 
   border: 1px solid $color-cerulean-blue;
@@ -36,7 +36,7 @@
 
 .header.is-open .header__toggle {
   width: 286px;
-  padding: 22px 222px 22px 20px;
+  padding: 20px 222px 20px 20px;
   border-color: $color-transparent;
   color: $color-default-white;
   background-color: $color-cerulean-blue;

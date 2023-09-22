@@ -6,23 +6,36 @@
 
 .accordion__element {
   position: relative;
-  padding: 40px;
+  padding: 43px 40px 41px;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
   background-color: $color-transparent;
 
+  min-width: 1028px;
+
   @include vp-1199 {
-    padding: 30px;
+    padding: 36px 30px;
+    min-width: 678px;
   }
 
   @include vp-767 {
-    padding: 20px 15px;
+    padding: 21px 15px;
+    min-width: 290px;
   }
 }
 
 .accordion__element.is-active {
   background-color: $color-cerulean-blue;
   color: $color-default-white;
+  padding: 41px 40px 35px;
+
+  @include vp-1199 {
+    padding: 36px 30px 25px;
+  }
+
+  @include vp-767 {
+    padding: 20px 14px 15px;
+  }
 }
 
 .accordion__title {
@@ -37,6 +50,7 @@
     @include vp-1199 {
       font-size: 22px;
       line-height: 26px;
+      max-width: 470px;
     }
 
     @include vp-767 {
@@ -57,17 +71,18 @@
     font-size: 16px;
     line-height: 26px;
     color: $color-default-white;
-    margin: 30px 0 0;
+    margin: 17px 0 0;
     max-width: 720px;
 
     @include vp-1199 {
       line-height: 20px;
-      margin-top: 32px;
+      margin-top: 23px;
+      max-width: 572px;
     }
 
     @include vp-767 {
       font-size: 14px;
-      margin-top: 22px;
+      margin-top: 17px;
       max-width: 570px;
     }
   }
@@ -150,16 +165,16 @@
   background-color: $color-default-white;
   border: 1px solid $color-cerulean-blue;
   transform: rotate(90deg);
-  top: 17%;
+  top: 20%;
   right: 40px;
 
   @include vp-1199 {
-    top: 14%;
+    top: 15%;
     right: 30px;
   }
 
   @include vp-767 {
-    top: 6%;
+    top: 8%;
     right: 15px;
   }
 }

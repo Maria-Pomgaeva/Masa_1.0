@@ -1,7 +1,7 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 20px 80px 20px 30px;
+  padding: 20px 65px 20px 30px;
 
   background-color: $color-transparent;
   border: 1px solid;
@@ -81,8 +81,7 @@
 
     margin: auto;
     transform: rotate(0deg);
-    fill: currentColor;
-    stroke: $color-default-white;
+    stroke: currentColor;
   }
 }
 
@@ -151,10 +150,6 @@
 .btn--light .btn__icon {
   color: $color-cerulean-blue;
   background-color: $color-default-white;
-
-  & svg {
-    stroke: $color-cerulean-blue;
-  }
 
   &:disabled {
     background-color: $color-disabled;
