@@ -54,6 +54,7 @@
 
   transition: background-color $trans-default, color $trans-default;
   user-select: none;
+  cursor: pointer;
 
   &--next {
     transform: rotate(180deg);
@@ -81,8 +82,11 @@
   }
 
   &:disabled {
-    stroke: $color-disabled;
     background-color: $color-transparent;
+
+    & svg {
+      stroke: $color-disabled;
+    }
   }
 }
 
@@ -98,11 +102,19 @@
   line-height: 20px;
   color: $color-cerulean-blue;
   opacity: 0.5;
+  cursor: pointer;
 
   &:hover,
   &:focus {
     border: 1px solid $color-cerulean-blue;
     opacity: 1;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $color-transparent;
+    background-color: $color-endeavour;
+    color: $color-default-white;
   }
 }
 

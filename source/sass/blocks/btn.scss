@@ -7,6 +7,7 @@
   border: 1px solid;
   border-radius: 30px;
 
+  user-select: none;
   cursor: pointer;
   transition: background-color $trans-default;
 
@@ -34,6 +35,7 @@
       &:hover,
       &:focus {
         background-color: $color-default-white;
+        outline: none;
 
         & svg {
           stroke: $color-cerulean-blue;
@@ -83,6 +85,10 @@
     transform: rotate(0deg);
     stroke: currentColor;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn--dark {
@@ -93,6 +99,7 @@
   &:focus {
     background-color: $color-cerulean-blue;
     color: $color-default-white;
+    outline: none;
 
     & .btn__icon {
       background-color: $color-default-white;
@@ -131,6 +138,7 @@
   &:focus {
     background-color: $color-default-white;
     color: $color-cerulean-blue;
+    outline: none;
 
     & .btn__icon {
       background-color: $color-cerulean-blue;

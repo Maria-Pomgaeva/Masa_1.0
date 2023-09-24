@@ -65,16 +65,24 @@
   text-transform: uppercase;
 
   opacity: 0.7;
+}
 
-  &:hover,
-  &:focus {
-    opacity: 1;
-    outline: none;
+.nav__item.is-active {
+  & .nav__link-button svg {
+    transform: rotate(180deg);
   }
 }
 
 .nav__link {
   color: $color-default-white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    outline: none;
+    outline: none;
+  }
 }
 
 .nav__link-button {
@@ -84,10 +92,12 @@
   padding: 0;
 
   text-transform: uppercase;
-}
 
-.nav__link-button svg {
-  color: $color-default-white;
+  & svg {
+    stroke: $color-default-white;
+    margin-left: 10px;
+    cursor: pointer;
+  }
 }
 
 .nav__drop-list {
@@ -111,5 +121,6 @@
   &:hover,
   &:focus {
     opacity: 1;
+    outline: none;
   }
 }

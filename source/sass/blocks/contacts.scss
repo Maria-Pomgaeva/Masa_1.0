@@ -99,6 +99,9 @@
     line-height: 26px;
 
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
     @include vp-1199 {
       line-height: 20px;
@@ -120,6 +123,7 @@
   &:hover,
   &:focus {
     text-decoration-color: $color-default-white;
+    outline: none;
   }
 
   &:active {

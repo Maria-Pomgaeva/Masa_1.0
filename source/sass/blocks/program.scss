@@ -220,8 +220,12 @@
   }
 }
 
-.program__btn {
+.program__btn.btn--min {
   margin-top: 30px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .program__bar {

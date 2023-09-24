@@ -102,6 +102,10 @@
   }
 }
 
+.promo__pagination-bullet:focus-visible {
+  outline: none;
+}
+
 .promo__pagination-bullet.is-active {
   background-color: $color-cerulean-blue;
 }
@@ -184,7 +188,9 @@
   }
 
   @include vp-767 {
+    position: relative;
     display: block;
+
     background-color: $color-transparent;
     max-width: none;
     padding: 0;
@@ -222,7 +228,7 @@
   background-size: 26px;
 
   @include vp-767 {
-    right: 21px;
+    left: 260px;
 
     width: 10px;
     height: 10px;
@@ -232,6 +238,7 @@
 
 .promo__text-content {
   @include vp-767 {
+    position: relative;
     width: 260px;
     padding: 0 14px 8px;
     background-color: $color-default-white;
@@ -250,11 +257,12 @@
 
     margin-top: -1px;
 
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       top: 0;
-      right: -9px;
+      left: 181px;
+      // right: -9px;
 
       width: 10px;
       height: 10px;
@@ -264,6 +272,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 10px;
+
+
     }
   }
 }

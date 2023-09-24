@@ -1,6 +1,8 @@
 export const initSwiper = function () {
   const promoImage = new window.Swiper('.promo__swiper-image', {
     slidesPerView: 1,
+    loop: true,
+    speed: 300,
 
     breakpoints: {
       1200: {
@@ -11,6 +13,8 @@ export const initSwiper = function () {
   // eslint-disable-next-line
   const promoContent = new window.Swiper('.promo__swiper-content', {
     slidesPerView: 1,
+    loop: true,
+    speed: 300,
     effect: 'fade',
     autoHeight: true,
 

@@ -15,6 +15,7 @@
 
   @include hover-focus {
     opacity: 0.6;
+    outline: none;
   }
 
   @include active {

@@ -190,6 +190,7 @@
     & svg {
       width: 100%;
       height: 100%;
+      stroke: $color-charcoal;
     }
   }
 
@@ -340,5 +341,11 @@
     .custom-select__label--light {
       color: $color-default-white;
     }
+  }
+}
+
+.custom-select__icon--light {
+  & svg {
+    stroke: $color-default-white;
   }
 }

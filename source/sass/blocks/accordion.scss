@@ -6,12 +6,29 @@
 
 .accordion__element {
   position: relative;
-  padding: 43px 40px 41px;
+
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
+
+  &.is-active {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+  }
+}
+
+.accordion__element.is-active .accordion__title:hover  {
+  background-color: $color-cerulean-blue;
+}
+
+.accordion__title {
+  padding: 43px 40px 41px;
+
   background-color: $color-transparent;
+  border: none;
+  border-radius: 16px;
 
   min-width: 1028px;
+  text-align: left;
 
   @include vp-1199 {
     padding: 36px 30px;
@@ -22,23 +39,7 @@
     padding: 21px 15px;
     min-width: 290px;
   }
-}
 
-.accordion__element.is-active {
-  background-color: $color-cerulean-blue;
-  color: $color-default-white;
-  padding: 41px 40px 35px;
-
-  @include vp-1199 {
-    padding: 36px 30px 25px;
-  }
-
-  @include vp-767 {
-    padding: 20px 14px 15px;
-  }
-}
-
-.accordion__title {
   & h3 {
     font-size: 28px;
     font-weight: 400;
@@ -60,6 +61,23 @@
       max-width: 200px;
     }
   }
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    outline: none;
+
+    & .accordion__button-inner {
+      background-color: $color-default-white;
+      border: 1px solid $color-cerulean-blue;
+      outline: none;
+    }
+
+    & .accordion__button-inner::before,
+    .accordion__button-inner::after {
+      background: $color-cerulean-blue;
+    }
+  }
 }
 
 .accordion__element.is-active h3 {
@@ -67,22 +85,27 @@
 }
 
 .accordion__text {
+  padding: 0 40px 33px;
+
+  @include vp-1199 {
+    padding: 15px 29px 26px;
+  }
+
   & p {
     font-size: 16px;
     line-height: 26px;
     color: $color-default-white;
-    margin: 17px 0 0;
     max-width: 720px;
+
+    margin: 0;
 
     @include vp-1199 {
       line-height: 20px;
-      margin-top: 23px;
       max-width: 572px;
     }
 
     @include vp-767 {
       font-size: 14px;
-      margin-top: 17px;
       max-width: 570px;
     }
   }
@@ -108,13 +131,6 @@
   @include vp-767 {
     right: 15px;
   }
-}
-
-.accordion__button-inner:hover,
-.accordion__button-inner:focus {
-  background-color: $color-transparent;
-  border: 1px solid $color-cerulean-blue;
-  outline: none;
 }
 
 .accordion__button-inner:active {
@@ -155,6 +171,7 @@
   height: 18px;
 
   background-color: $color-default-white;
+  cursor: pointer;
 }
 
 .accordion__button-inner::after {
@@ -167,6 +184,7 @@
   transform: rotate(90deg);
   top: 20%;
   right: 40px;
+  cursor: pointer;
 
   @include vp-1199 {
     top: 15%;
