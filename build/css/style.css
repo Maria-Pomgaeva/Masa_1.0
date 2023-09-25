@@ -2488,6 +2488,10 @@ button,
   background-color: #316dc2;
 }
 
+.header__toggle.btn {
+  padding: 20px 70px 20px 20px;
+}
+
 .header.is-open .header__toggle-range {
   background-color: #ffffff;
 }
@@ -4749,7 +4753,7 @@ button,
 }
 
 .contacts {
-  padding: 120px 100px;
+  padding: 120px 0;
   background-color: #316dc2;
 }
 
@@ -5462,7 +5466,7 @@ button,
   }
 
   .contacts {
-    padding: 93px 45px 98px;
+    padding: 96px 0 100px;
   }
 
   .contacts__wrapper {
@@ -5500,7 +5504,7 @@ button,
 
   .feedback__form {
     max-width: 442px;
-    padding: 60px 45px 58px;
+    padding: 60px 45px 55px;
   }
 
   .feedback__form h2 {
@@ -6077,7 +6081,7 @@ button,
   }
 
   .accordion__element {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 
   .accordion__title {
