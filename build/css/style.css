@@ -4446,20 +4446,15 @@ button,
 }
 
 .accordion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 10px;
+  max-width: 1028px;
+  margin: 0 auto;
 }
 
 .accordion__element {
   position: relative;
-  border-radius: 16px;
+  margin-bottom: 10px;
   border: 1px solid #316dc2;
+  border-radius: 16px;
 }
 
 .accordion__element.is-active {
@@ -4473,11 +4468,24 @@ button,
 
 .accordion__title {
   padding: 43px 40px 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
+  margin: 0;
+  padding: 30px 270px 32px 40px;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   border-radius: 16px;
-  min-width: 1028px;
   text-align: left;
+}
+
+.accordion__title span {
+  max-width: 720px;
 }
 
 .accordion__title h3 {
@@ -4513,12 +4521,9 @@ button,
   color: #ffffff;
 }
 
-.accordion__element.is-active .accordion__title {
-  padding-bottom: 13px;
-}
-
 .accordion__text {
   padding: 0 40px 33px;
+  margin-top: -33px;
 }
 
 .accordion__text p {
@@ -4632,7 +4637,7 @@ button,
 }
 
 .reviews {
-  padding: 88px 0 124px;
+  padding: 120px 0 124px;
 }
 
 .reviews__container h2 {
@@ -4756,7 +4761,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0;
 }
 
 .contacts__wrapper {
@@ -5368,9 +5372,17 @@ button,
     font-size: 34px;
   }
 
+  .accordion {
+    max-width: 678px;
+  }
+
+  .accordion__element {
+    margin-bottom: 12px;
+  }
+
   .accordion__title {
-    padding: 36px 30px;
-    min-width: 678px;
+    min-height: 98px;
+    padding: 10px 176px 10px 30px;
   }
 
   .accordion__title h3 {
@@ -5398,7 +5410,7 @@ button,
   }
 
   .reviews {
-    padding: 100px 0;
+    padding: 89px 0 100px;
   }
 
   .reviews__container h2 {
@@ -6061,10 +6073,15 @@ button,
   }
 
   .accordion {
-    gap: 11px;
+    max-width: 290px;
+  }
+
+  .accordion__element {
+    margin-bottom: 10px;
   }
 
   .accordion__title {
+    min-height: 70px;
     padding: 21px 15px 19px;
     min-width: 290px;
   }
@@ -6076,7 +6093,8 @@ button,
   }
 
   .accordion__text {
-    padding: 4px 15px 15px;
+    padding: 9px 15px 18px;
+    margin-top: -7px;
   }
 
   .accordion__text p {
@@ -6094,7 +6112,7 @@ button,
   }
 
   .reviews {
-    padding: 69px 0 14px;
+    padding: 59px 0 13px;
   }
 
   .reviews__container h2 {
