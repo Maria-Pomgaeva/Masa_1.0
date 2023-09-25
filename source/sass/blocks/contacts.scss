@@ -31,7 +31,7 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 27px;
   }
 
   @include vp-767 {
@@ -60,14 +60,14 @@
 
 .contacts__list {
   display: grid;
-  grid-template-columns: 290px auto auto;
+  grid-template-columns: 270px auto auto;
   justify-content: end;
-  gap: 35px;
+  gap: 51px;
 
   margin: 0;
 
   @include vp-1199 {
-    gap: 75px;
+    gap: 87px;
     justify-content: start;
   }
 
@@ -87,6 +87,10 @@
     opacity: 0.8;
 
     margin: 0 0 15px;
+
+    @include vp-1199 {
+      margin-bottom: 17px;
+    }
 
     @include vp-767 {
       margin-bottom: 10px;

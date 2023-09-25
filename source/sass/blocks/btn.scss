@@ -1,59 +1,69 @@
 .btn {
   position: relative;
+
   display: inline-block;
-  padding: 20px 65px 20px 30px;
+  padding: 20px 80px 20px 30px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
 
   background-color: $color-transparent;
-  border: 1px solid;
+  color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
-
-  user-select: none;
   cursor: pointer;
+
   transition: background-color $trans-default;
 
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 0.28px;
-  text-transform: uppercase;
-
   @include vp-767 {
+    padding: 14px 56px 14px 20px;
+
     font-size: 12px;
     line-height: 12px;
-    padding: 14px 56px 14px 20px;
   }
 
-  &--min {
-    padding: 0;
-    border: none;
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-default-white;
+
+    background-color: $color-cerulean-blue;
+    outline: none;
 
     & .btn__icon {
-      position: static;
-      width: 30px;
-      height: 30px;
+      color: $color-cerulean-blue;
 
-      &:hover,
-      &:focus {
-        background-color: $color-default-white;
-        outline: none;
+      background-color: $color-default-white;
+    }
 
-        & svg {
-          stroke: $color-cerulean-blue;
-          transform: rotate(45deg);
-        }
-      }
+    & svg {
+      transform: rotate(45deg);
+    }
+  }
 
-      &:disabled {
-        background-color: $color-disabled;
-      }
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+
+    & .btn__icon {
+      color: rgba(49, 109, 194, 0.7);
     }
   }
 
   &:disabled {
-    border-color: $color-disabled;
     color: $color-disabled;
 
+    border-color: $color-disabled;
+
     pointer-events: none;
+
+    & .btn__icon {
+      color: rgba(255, 255, 255, 0.6);
+
+      background-color: $color-disabled;
+    }
   }
 }
 
@@ -61,15 +71,16 @@
   position: absolute;
   top: 50%;
   right: 3px;
-  transform: translateY(-50%);
 
   display: flex;
-
   width: 46px;
   height: 46px;
-  border-radius: 50%;
-  background-color: $color-cerulean-blue;
+
   color: $color-default-white;
+
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  transform: translateY(-50%);
 
   @include vp-767 {
     width: 34px;
@@ -80,86 +91,53 @@
     display: block;
     width: 12px;
     height: 12px;
-
     margin: auto;
-    transform: rotate(0deg);
+
     stroke: currentColor;
   }
-
-  &:focus {
-    outline: none;
-  }
 }
 
-.btn--dark {
-  color: $color-cerulean-blue;
-  border-color: $color-cerulean-blue;
+.btn--min {
+  padding: 0;
 
-  &:hover,
-  &:focus {
-    background-color: $color-cerulean-blue;
-    color: $color-default-white;
-    outline: none;
+  border-color: transparent;
 
-    & .btn__icon {
-      background-color: $color-default-white;
-    }
+  & .btn__icon {
+    position: static;
 
-    & svg {
-      stroke: $color-cerulean-blue;
-      transform: rotate(45deg);
-    }
-  }
+    width: 30px;
+    height: 30px;
 
-  &:active {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  &:disabled {
-    border-color: $color-disabled;
-    color: $color-disabled;
-  }
-}
-
-.btn--dark .btn__icon {
-  color: $color-default-white;
-  background-color: $color-cerulean-blue;
-
-  &:disabled {
-    background-color: $color-disabled;
+    transform: none;
   }
 }
 
 .btn--light {
   color: $color-default-white;
+
   border-color: $color-default-white;
 
   &:hover,
-  &:focus {
-    background-color: $color-default-white;
+  &:focus,
+  &:focus-visible {
     color: $color-cerulean-blue;
-    outline: none;
+
+    background-color: $color-default-white;
 
     & .btn__icon {
+      color: $color-default-white;
+
       background-color: $color-cerulean-blue;
     }
+  }
 
-    & svg {
-      stroke: $color-default-white;
-      transform: rotate(45deg);
+  & .btn__icon {
+    color: $color-cerulean-blue;
+
+    background-color: $color-default-white;
+
+    &:disabled {
+      background-color: $color-disabled;
     }
-  }
-
-  &:active {
-    color: rgba(49, 109, 194, 0.7);
-  }
-}
-
-.btn--light .btn__icon {
-  color: $color-cerulean-blue;
-  background-color: $color-default-white;
-
-  &:disabled {
-    background-color: $color-disabled;
   }
 }

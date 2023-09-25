@@ -110,8 +110,7 @@
   flex-direction: column;
   align-items: center;
 
-  width: 600px;
-  padding: 60px 80px;
+  padding: 52px 80px 65px;
 
   background-color: $color-default-white;
   border-radius: 16px;
@@ -128,7 +127,7 @@
     color: $color-cerulean-blue;
 
     text-align: center;
-    margin: 0 0 20px;
+    margin: 0 0 7px;
 
     @include vp-1199 {
       font-size: 28px;

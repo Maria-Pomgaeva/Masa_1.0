@@ -2,7 +2,9 @@ export const initSwiper = function () {
   const promoImage = new window.Swiper('.promo__swiper-image', {
     slidesPerView: 1,
     loop: true,
-    speed: 300,
+    autoplay: {
+      delay: 3000,
+    },
 
     breakpoints: {
       1200: {
@@ -14,7 +16,9 @@ export const initSwiper = function () {
   const promoContent = new window.Swiper('.promo__swiper-content', {
     slidesPerView: 1,
     loop: true,
-    speed: 300,
+    autoplay: {
+      delay: 3000,
+    },
     effect: 'fade',
     autoHeight: true,
 

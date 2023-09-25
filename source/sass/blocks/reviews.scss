@@ -1,5 +1,5 @@
 .reviews {
-  padding: 88px 0 120px;
+  padding: 88px 0 124px;
 
   @include vp-1199 {
     padding: 100px 0;
@@ -77,6 +77,11 @@
   justify-content: space-between;
   align-items: center;
 
+  @include vp-1199 {
+    gap: 32px;
+    justify-content: flex-start;
+  }
+
   @include vp-767 {
     flex-direction: column;
     align-items: flex-start;
@@ -91,6 +96,7 @@
   align-items: center;
 
   @include vp-767 {
+    grid-template-columns: 60px 80px;
     gap: 10px;
   }
 
@@ -100,7 +106,8 @@
     border-radius: 50%;
 
     @include vp-767 {
-      width: 60px;
+      max-width: 60px;
+      max-height: 60px;
     }
   }
 
@@ -130,8 +137,17 @@
   margin: 0;
 
   @include vp-1199 {
-    gap: 0;
+    grid-template-columns: 126px auto;
+    gap: 38px;
+    margin-top: 3px;
     justify-items: end;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 108px auto;
+    justify-items: start;
+    gap: 24px;
+    margin: 0;
   }
 }
 

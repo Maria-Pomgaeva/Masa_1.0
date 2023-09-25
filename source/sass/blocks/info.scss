@@ -106,6 +106,10 @@
   width: 100%;
   border-radius: 38px;
   background-color: $color-endeavour;
+
+  @include vp-767 {
+    border-radius: 16px;
+  }
 }
 
 .info__list {
@@ -172,8 +176,8 @@
   text-transform: uppercase;
 
   @include vp-767 {
-    top: -12px;
-    left: -18px;
+    top: -6px;
+    left: -16px;
 
     width: 32px;
     height: 32px;

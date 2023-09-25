@@ -21,7 +21,7 @@
     }
 
     @include vp-767 {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 14px;
     }
   }
@@ -78,6 +78,10 @@
     cursor: pointer;
 
     transition: border trans-default;
+
+    @include vp-767 {
+      height: 43px;
+    }
 
     &:hover,
     &:focus {

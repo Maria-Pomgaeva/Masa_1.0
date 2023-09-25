@@ -116,14 +116,6 @@
   }
 }
 
-.about__btn {
-  padding-right: 80px;
-
-  @include vp-767 {
-    padding-right: 56px;
-  }
-}
-
 .about__text-adv {
   padding: 70px 106px 56px 106px;
   background-color: $color-cerulean-blue;
@@ -162,6 +154,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 171px 1fr;
+  grid-template-rows: 50px 1fr;
   gap: 20px;
   align-items: center;
 
@@ -173,7 +166,7 @@
 
   @include vp-1199 {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 40px 1fr;
     align-items: start;
     gap: 12px;
 
@@ -181,7 +174,7 @@
   }
 
   @include vp-767 {
-    grid-template-rows: 20px 1fr;
+    grid-template-rows: 15px 1fr;
     gap: 8px;
     padding: 19px 17px 23px 19px;
   }

@@ -22,7 +22,7 @@
     }
 
     @include vp-767 {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 14px;
     }
   }
@@ -66,10 +66,6 @@
 
   input {
     min-height: 50px;
-
-    @include vp-767 {
-      min-height: 50px;
-    }
   }
 
   textarea {

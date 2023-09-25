@@ -35,8 +35,9 @@
 
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
     gap: 10px;
-    padding-top: 6px;
+    // padding-top: 6px;
 
     font-size: 12px;
     line-height: 12px;
@@ -45,6 +46,7 @@
     cursor: pointer;
 
     @include vp-767 {
+      padding-top: 0;
       line-height: 14px;
     }
 
@@ -137,6 +139,10 @@
 
   label {
     color: rgba($color-default-white, 0.9);
+
+    @include vp-1199 {
+      margin-top: -8px;
+    }
   }
 
   &--checkbox {

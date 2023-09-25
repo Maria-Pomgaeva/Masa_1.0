@@ -49,6 +49,7 @@
 
   @include vp-767 {
     margin: 25px 0;
+    padding: 0;
     flex-wrap: nowrap;
     justify-content: start;
     overflow-x: auto;

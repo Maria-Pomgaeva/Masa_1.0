@@ -27,14 +27,15 @@
                 <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
             </a>
+            <nav class="header__nav nav">
             <button class="header__toggle btn" type="button" aria-label="Открыть / Закрыть меню" aria-pressed="false" data-burger>Меню
               <span class="header__toggle-range btn__icon">
                 <span class="header__toggle-icon"></span>
               </span>
             </button>
             <div class="nav__inner">
+              <div class="nav__overlay" data-overlay></div>
               <div class="nav__wrapper">
-                <div class="nav__overlay" data-overlay></div>
                 <ul class="nav__menu list-reset" data-accordion="parent">
                   <li class="nav__item">
                     <a class="nav__link" href="#about" data-menu-link>О проекте</a>
@@ -102,6 +103,8 @@
                 </ul>
               </div>
             </div>
+            </nav>
+
           </div>
         </div>
       </header>
@@ -754,7 +757,7 @@
 
               <div class="accordion__element" data-accordion="element">
                 <button class="accordion__title" type="button" aria-label="открыть/закрыть пункт" data-accordion="button">
-                  <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для дальнейшего обучения?</h3>
+                  <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для&nbsp;дальнейшего обучения?</h3>
                   <span class="accordion__button-inner"></span>
                 </button>
                 <div class="accordion__content" data-accordion="content">
@@ -1076,12 +1079,12 @@
           </button>
           <div class="form" data-form-validate data-callback="base">
             <form method="post" action="https://echo.htmlacademy.ru">
-              <div class="form__wrapper">
-                <div class="form__input custom-input" data-validate-type="text" data-limitation="name" data-required="" autofocus>
+              <div class="form__wrapper form__wrapper--modal">
+                <div class="form__input form__input--modal custom-input" data-validate-type="text" data-limitation="name" data-required="" autofocus>
                   <label for="modal-name">Имя</label>
                   <input type="text" id="modal-name" name="user-name" autofocus required>
                 </div>
-                <div class="form__input custom-input" data-validate-type="phone" data-on-input-validate="" data-required="">
+                <div class="form__input form__input--modal custom-input" data-validate-type="phone" data-on-input-validate="" data-required="">
                   <label for="modal-phone">Телефон</label>
                   <input type="tel" id="modal-phone" name="phone" required autocomplete="off">
                 </div>
@@ -1102,14 +1105,14 @@
                     <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Череповец</li>
                   </ul>
                 </div>
-                <div class="form__input form__input--checkbox custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
+                <div class="form__toggle form__toggle--modal form__input form__input--modal-checkbox form__input--checkbox custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
                   <label for="modal-user-agreement">
                     <input type="checkbox" value="user-agreement-1" id="modal-user-agreement" name="user-agreement">
                     <span>Я согласен на обработку моих персональных данных</span>
                   </label>
                 </div>
               </div>
-              <button class="form__btn btn btn--dark form__submit" type="submit">Отправить
+              <button class="form__btn form__btn--modal btn btn--dark form__submit" type="submit">Отправить
                 <span class="btn__icon">
                   <svg width="8" height="8" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#arrow-btn"></use>
