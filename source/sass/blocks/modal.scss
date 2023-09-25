@@ -58,8 +58,8 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 30px;
+    right: 32px;
     z-index: 1;
 
     width: 18px;
@@ -69,6 +69,12 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.9;
+    }
   }
 
   &--responsive {

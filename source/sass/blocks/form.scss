@@ -5,7 +5,7 @@
   margin: 28px 0 37px;
 
   @include vp-1199 {
-    margin: 34px 0 39px;
+    margin: 20px 0 41px;
   }
 
   @include vp-767 {
@@ -29,6 +29,7 @@
   &--modal {
     display: flex;
     margin: 0 auto;
+    max-width: 194px;
 
     @include vp-767 {
       width: 100%;
@@ -39,6 +40,10 @@
 
 .form__toggle {
   margin-top: 7px;
+
+  @include vp-1199 {
+    margin-top: 11px;
+  }
 
   @include vp-767 {
     margin-top: 2px;
@@ -60,5 +65,5 @@
 }
 
 .form__input--modal-checkbox {
-  margin-top: -7px;
+  margin-top: 0;
 }

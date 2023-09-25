@@ -14,7 +14,9 @@
   color: $color-cerulean-blue;
   border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
+
   cursor: pointer;
+  user-select: none;
 
   transition: background-color $trans-default;
 
@@ -81,6 +83,7 @@
   background-color: $color-cerulean-blue;
   border-radius: 50%;
   transform: translateY(-50%);
+  user-select: none;
 
   @include vp-767 {
     width: 34px;

@@ -962,7 +962,7 @@
                         <label for="feedback-phone">Телефон</label>
                       <input type="tel" id="feedback-phone" name="phone" required autocomplete="off">
                       </div>
-                      <div class="custom-input custom-input--light custom-input--textarea">
+                      <div class="custom-input custom-input--light custom-input--textarea" data-required="" data-validate-type="text">
                         <label for="user-message">Ваше сообщение</label>
                         <textarea id="user-message" name="user-message"></textarea>
                       </div>
@@ -1080,9 +1080,9 @@
           <div class="form" data-form-validate data-callback="base">
             <form method="post" action="https://echo.htmlacademy.ru">
               <div class="form__wrapper form__wrapper--modal">
-                <div class="form__input form__input--modal custom-input" data-validate-type="text" data-limitation="name" data-required="" autofocus>
+                <div class="form__input form__input--modal custom-input" data-validate-type="text" data-limitation="name" data-required="">
                   <label for="modal-name">Имя</label>
-                  <input type="text" id="modal-name" name="user-name" autofocus required>
+                  <input type="text" id="modal-name" name="user-name" required autofocus="">
                 </div>
                 <div class="form__input form__input--modal custom-input" data-validate-type="phone" data-on-input-validate="" data-required="">
                   <label for="modal-phone">Телефон</label>

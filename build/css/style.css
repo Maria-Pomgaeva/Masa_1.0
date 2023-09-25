@@ -2323,6 +2323,10 @@ button,
   border: 1px solid #316dc2;
   border-radius: 30px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
@@ -2384,6 +2388,10 @@ button,
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn__icon svg {
@@ -2467,12 +2475,6 @@ button,
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
-}
-
-.header__toggle:hover,
-.header__toggle:focus {
-  outline: none;
-  opacity: 0.9;
 }
 
 .header.is-open .header__toggle {
@@ -2654,11 +2656,18 @@ button,
   align-items: center;
   padding: 0;
   color: #ffffff;
+  opacity: 0.7;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
   opacity: 0.7;
+}
+
+.nav__link-button:hover,
+.nav__link-button:focus {
+  opacity: 1;
+  outline: none;
 }
 
 .nav__link-button svg {
@@ -3072,8 +3081,8 @@ button,
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 30px;
+  right: 32px;
   z-index: 1;
   width: 18px;
   height: 18px;
@@ -3081,6 +3090,12 @@ button,
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
+}
+
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+  outline: none;
+  opacity: 0.9;
 }
 
 .modal--responsive .modal__content {
@@ -3170,6 +3185,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  max-width: 194px;
 }
 
 .form__toggle {
@@ -3177,7 +3193,7 @@ button,
 }
 
 .form__input--modal-checkbox {
-  margin-top: -7px;
+  margin-top: 0;
 }
 
 .custom-input,
@@ -3474,17 +3490,17 @@ button,
 
 .custom-select__item.focus-visible:focus {
   color: #ffffff;
-  background-color: #275699;
+  background-color: #316dc2;
 }
 
 .custom-select__item[aria-selected=true] {
   color: #ffffff;
-  background-color: #275699;
+  background-color: #316dc2;
 }
 
 .custom-select__item[aria-selected=true].focus-visible:focus:hover:not(.focus-visible) {
   color: #ffffff;
-  background-color: #275699;
+  background-color: #316dc2;
 }
 
 .custom-select__error {
@@ -3880,6 +3896,7 @@ button,
 .scrollbar__btn svg {
   width: 10px;
   height: 10px;
+  min-height: -webkit-fill-available;
   stroke: #316dc2;
 }
 
@@ -3898,6 +3915,7 @@ button,
 }
 
 .scrollbar__btn:disabled {
+  pointer-events: none;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -4455,23 +4473,72 @@ button,
 }
 
 .accordion__element {
-  position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  color: #316dc2;
   border: 1px solid #316dc2;
   border-radius: 16px;
 }
 
-.accordion__element.is-active {
-  background-color: #316dc2;
-  color: #ffffff;
+.accordion__element:hover,
+.accordion__element:focus-within {
+  background-color: #ffffff;
 }
 
-.accordion__element.is-active .accordion__title:hover {
+.accordion__element:hover .accordion__button-inner,
+.accordion__element:focus-within .accordion__button-inner {
+  color: #316dc2;
+  background-color: transparent;
+  border-color: #316dc2;
+}
+
+.accordion__element:active {
+  color: #275699;
+}
+
+.accordion__element:active .accordion__button-inner {
+  color: #275699;
+  background-color: transparent;
+  border-color: #275699;
+}
+
+.accordion__element.is-active {
+  color: #ffffff;
   background-color: #316dc2;
+}
+
+.accordion__element.is-active .accordion__button-inner {
+  color: #316dc2;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.accordion__element.is-active .accordion__button-inner::before {
+  display: none;
+}
+
+.accordion__element.is-active .accordion__title {
+  margin-bottom: -28px;
+}
+
+.accordion__element.is-active:hover .accordion__button-inner,
+.accordion__element.is-active:focus-within .accordion__button-inner {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.accordion__element.is-active:active {
+  background-color: #275699;
+}
+
+.accordion__element.is-active:active .accordion__button-inner {
+  color: #275699;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 .accordion__title {
-  padding: 43px 40px 41px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4481,163 +4548,69 @@ button,
   width: 100%;
   min-height: 120px;
   margin: 0;
-  padding: 30px 270px 32px 40px;
+  padding: 32px 270px 33px 40px;
+  text-align: left;
+  color: inherit;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   border-radius: 16px;
-  text-align: left;
-}
-
-.accordion__title span {
-  max-width: 720px;
 }
 
 .accordion__title h3 {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 34px;
-  color: #316dc2;
   margin: 0;
-  max-width: 720px;
-}
-
-.accordion__title:hover,
-.accordion__title:focus {
-  background-color: #ffffff;
-  outline: none;
-}
-
-.accordion__title:hover .accordion__button-inner,
-.accordion__title:focus .accordion__button-inner {
-  background-color: #ffffff;
-  border: 1px solid #316dc2;
-  outline: none;
-}
-
-.accordion__title:hover .accordion__button-inner::before,
-.accordion__title:hover .accordion__button-inner::after,
-.accordion__title:focus .accordion__button-inner::before,
-.accordion__title:focus .accordion__button-inner::after {
-  background: #316dc2;
-}
-
-.accordion__element.is-active h3 {
-  color: #ffffff;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
 }
 
 .accordion__text {
   padding: 0 40px 33px;
-  margin-top: -33px;
 }
 
 .accordion__text p {
-  font-size: 16px;
-  line-height: 26px;
-  color: #ffffff;
   max-width: 710px;
   margin: 0;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .accordion__button-inner {
   position: absolute;
-  top: 50%;
+  top: 48%;
   right: 40px;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #316dc2;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #316dc2;
-  border: 1px solid rgba(255, 255, 255, 0);
   cursor: pointer;
-}
-
-.accordion__button-inner:active {
-  background-color: #275699;
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-
-.accordion__button-inner:disabled {
-  background-color: #a9afb7;
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-
-.accordion__button-inner:hover::before,
-.accordion__button-inner:hover::after,
-.accordion__button-inner:focus::before,
-.accordion__button-inner:focus::after {
-  background: #316dc2;
-}
-
-.accordion__button-inner:active::before,
-.accordion__button-inner:active::after {
-  background: #ffffff;
-}
-
-.accordion__button-inner:disabled::before,
-.accordion__button-inner:disabled::after {
-  background: #ffffff;
 }
 
 .accordion__button-inner::before,
 .accordion__button-inner::after {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 50%;
   left: 50%;
+  background-color: currentColor;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.accordion__button-inner::before {
   width: 1px;
   height: 18px;
-  background-color: #ffffff;
-  cursor: pointer;
 }
 
 .accordion__button-inner::after {
-  -webkit-transform: translate(-50%, -50%) rotate(90deg);
-  -ms-transform: translate(-50%, -50%) rotate(90deg);
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.accordion__element.is-active .accordion__button-inner {
-  background-color: #ffffff;
-  border: 1px solid #316dc2;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 20%;
-  right: 40px;
-  cursor: pointer;
-}
-
-.accordion__element.is-active .accordion__button-inner:hover,
-.accordion__element.is-active .accordion__button-inner:focus {
-  background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #ffffff;
-}
-
-.accordion__element.is-active .accordion__button-inner::before,
-.accordion__element.is-active .accordion__button-inner::after {
-  background: #316dc2;
-}
-
-.accordion__element.is-active .accordion__button-inner:hover::before,
-.accordion__element.is-active .accordion__button-inner:focus::before {
-  background: #ffffff;
-}
-
-.accordion__element.is-active .accordion__button-inner:active::before {
-  background: #275699;
-}
-
-.accordion__element.is-active .accordion__button-inner:active::before .accordion__element {
-  background: #275699;
-}
-
-.accordion__element.is-active .accordion__button-inner::after {
-  display: none;
+  width: 18px;
+  height: 1px;
 }
 
 .reviews {
@@ -4669,7 +4642,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 25px;
-  padding: 50px 50px 40px;
+  padding: 50px 50px 43px;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -4688,6 +4661,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 87px;
 }
 
 .reviews__person {
@@ -4717,9 +4691,12 @@ button,
 .reviews__detalis {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 126px auto;
-  grid-template-columns: 126px auto;
-  gap: 25px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+  gap: 27px;
   margin: 0;
 }
 
@@ -5104,7 +5081,8 @@ button,
 
   .promo__text-header {
     max-width: 97%;
-    padding: 32px 20px 20px 40px;
+    padding: 30px 20px 20px 40px;
+    margin-top: 17px;
   }
 
   .promo__text-header h2 {
@@ -5205,7 +5183,11 @@ button,
   }
 
   .form__wrapper {
-    margin: 34px 0 39px;
+    margin: 20px 0 41px;
+  }
+
+  .form__toggle {
+    margin-top: 11px;
   }
 
   .custom-input,
@@ -5216,6 +5198,10 @@ button,
   .custom-input label,
   .custom-textarea label {
     line-height: 20px;
+  }
+
+  .custom-select {
+    gap: 7px;
   }
 
   .custom-select__label {
@@ -5369,56 +5355,46 @@ button,
   }
 
   .questions__container {
-    gap: 40px;
+    gap: 38px;
   }
 
   .questions__container h2 {
     font-size: 34px;
   }
 
-  .accordion {
-    max-width: 678px;
-  }
-
   .accordion__element {
-    margin-bottom: 12px;
-  }
-
-  .accordion__element.is-active .accordion__title {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .accordion__title {
     min-height: 98px;
-    padding: 10px 176px 10px 30px;
+    padding: 24px 100px 24px 30px;
   }
 
   .accordion__title h3 {
     font-size: 22px;
     line-height: 26px;
-    max-width: 470px;
   }
 
   .accordion__text {
-    padding: 9px 29px 26px;
+    padding: 15px 29px 26px;
   }
 
   .accordion__text p {
+    max-width: 570px;
     line-height: 20px;
-    max-width: 572px;
   }
 
   .accordion__button-inner {
     right: 30px;
   }
 
-  .accordion__element.is-active .accordion__button-inner {
-    top: 15%;
-    right: 30px;
-  }
-
   .reviews {
     padding: 86px 0 98px;
+  }
+
+  .reviews__container {
+    padding: 0 0 0 45px;
   }
 
   .reviews__container h2 {
@@ -5435,7 +5411,7 @@ button,
   }
 
   .reviews__header {
-    gap: 32px;
+    gap: 45px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -5599,6 +5575,11 @@ button,
 
   .nav__wrapper {
     padding: 35px 20px;
+  }
+
+  .nav__menu {
+    overflow-y: auto;
+    white-space: nowrap;
   }
 
   .promo__pagination.swiper-pagination {
@@ -6080,51 +6061,34 @@ button,
     line-height: 20px;
   }
 
-  .accordion {
-    max-width: 290px;
-  }
-
-  .accordion__element {
-    margin-bottom: 9px;
-  }
-
-  .accordion__element.is-active .accordion__title {
-    margin-bottom: 0;
-  }
-
   .accordion__title {
-    min-height: 70px;
-    padding: 21px 15px 19px;
-    min-width: 290px;
+    min-height: 78px;
+    padding: 18px 55px 20px 15px;
   }
 
   .accordion__title h3 {
     font-size: 16px;
     line-height: 18px;
-    max-width: 220px;
   }
 
   .accordion__text {
-    padding: 9px 15px 18px;
-    margin-top: -7px;
+    padding: 24px 14px 14px;
   }
 
   .accordion__text p {
     font-size: 14px;
-    max-width: 570px;
   }
 
   .accordion__button-inner {
     right: 15px;
   }
 
-  .accordion__element.is-active .accordion__button-inner {
-    top: 8%;
-    right: 15px;
-  }
-
   .reviews {
     padding: 59px 0 13px;
+  }
+
+  .reviews__container {
+    padding: 0 15px;
   }
 
   .reviews__container h2 {
@@ -6325,12 +6289,12 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     color: #ffffff;
-    background-color: #275699;
+    background-color: #316dc2;
   }
 
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible):hover:not(.focus-visible) {
     color: #ffffff;
-    background-color: #275699;
+    background-color: #316dc2;
   }
 
   .custom-toggle--checkbox label:hover:not(.focus-visible) input {

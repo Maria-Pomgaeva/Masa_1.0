@@ -1,171 +1,175 @@
 .accordion {
   max-width: 1028px;
   margin: 0 auto;
-
-  @include vp-1199 {
-    max-width: 678px;
-  }
-
-  @include vp-767 {
-    max-width: 290px;
-  }
 }
 
 .accordion__element {
-  position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+
+  color: $color-cerulean-blue;
 
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
 
   @include vp-1199 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
-  @include vp-767 {
-    margin-bottom: 9px;
+  &:hover,
+  &:focus-within {
+    background-color: $color-default-white;
+
+    & .accordion__button-inner {
+      color: $color-cerulean-blue;
+
+      background-color: transparent;
+      border-color: $color-cerulean-blue;
+    }
   }
 
-  &.is-active {
-    background-color: $color-cerulean-blue;
-    color: $color-default-white;
-  }
-}
+  &:active {
+    color: $color-endeavour;
 
-.accordion__element.is-active .accordion__title:hover  {
-  background-color: $color-cerulean-blue;
+    & .accordion__button-inner {
+      color: $color-endeavour;
+
+      background-color: transparent;
+      border-color: $color-endeavour;
+    }
+  }
 }
 
 .accordion__element.is-active {
-  & .accordion__title {
-    @include vp-1199 {
-      margin-bottom: 5px;
-    }
+  color: $color-default-white;
 
-    @include vp-767 {
-      margin-bottom: 0;
+  background-color: $color-cerulean-blue;
+
+  & .accordion__button-inner {
+    color: $color-cerulean-blue;
+
+    background-color: $color-default-white;
+    border-color: $color-default-white;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  & .accordion__title {
+    margin-bottom: -28px;
+  }
+
+  &:hover,
+  &:focus-within {
+    & .accordion__button-inner {
+      color: $color-default-white;
+
+      background-color: transparent;
+      border-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+
+    & .accordion__button-inner {
+      color: $color-endeavour;
+
+      background-color: $color-default-white;
+      border-color: $color-default-white;
     }
   }
 }
 
 .accordion__title {
-  padding: 43px 40px 41px;
+  position: relative;
 
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 120px;
   margin: 0;
-  padding: 30px 270px 32px 40px;
+  padding: 32px 270px 33px 40px;
+
+  text-align: left;
+  color: inherit;
 
   background-color: $color-transparent;
   border: none;
   border-radius: 16px;
 
-  text-align: left;
-
   @include vp-1199 {
     min-height: 98px;
-    padding: 10px 176px 10px 30px;
+    padding: 24px 100px 24px 30px;
   }
 
   @include vp-767 {
-    min-height: 70px;
-    padding: 21px 15px 19px;
-    min-width: 290px;
-  }
-
-  & span {
-    max-width: 720px;
+    min-height: 78px;
+    padding: 18px 55px 20px 15px;
   }
 
   & h3 {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 34px;
-    color: $color-cerulean-blue;
     margin: 0;
-    max-width: 720px;
+
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
 
     @include vp-1199 {
       font-size: 22px;
       line-height: 26px;
-      max-width: 470px;
     }
 
     @include vp-767 {
       font-size: 16px;
       line-height: 18px;
-      max-width: 220px;
     }
   }
-
-  &:hover,
-  &:focus {
-    background-color: $color-default-white;
-    outline: none;
-
-    & .accordion__button-inner {
-      background-color: $color-default-white;
-      border: 1px solid $color-cerulean-blue;
-      outline: none;
-    }
-
-    & .accordion__button-inner::before,
-    .accordion__button-inner::after {
-      background: $color-cerulean-blue;
-    }
-  }
-}
-
-.accordion__element.is-active h3 {
-  color: $color-default-white;
 }
 
 .accordion__text {
   padding: 0 40px 33px;
-  margin-top: -33px;
 
   @include vp-1199 {
-    padding: 9px 29px 26px;
+    padding: 15px 29px 26px;
   }
-
   @include vp-767 {
-    padding: 9px 15px 18px;
-    margin-top: -7px;
+    padding: 24px 14px 14px;
   }
 
   & p {
-    font-size: 16px;
-    line-height: 26px;
-    color: $color-default-white;
     max-width: 710px;
-
     margin: 0;
 
+    font-size: 16px;
+    line-height: 26px;
+
     @include vp-1199 {
+      max-width: 570px;
+
       line-height: 20px;
-      max-width: 572px;
     }
 
     @include vp-767 {
       font-size: 14px;
-      max-width: 570px;
     }
   }
 }
 
 .accordion__button-inner {
   position: absolute;
-  top: 50%;
+  top: 48%;
   right: 40px;
-  transform: translateY(-50%);
+
   width: 40px;
   height: 40px;
 
-  border-radius: 50%;
+  color: $color-default-white;
+
   background-color: $color-cerulean-blue;
   border: 1px solid $color-transparent;
+  border-radius: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
 
   @include vp-1199 {
@@ -175,96 +179,26 @@
   @include vp-767 {
     right: 15px;
   }
-}
 
-.accordion__button-inner:active {
-  background-color: $color-endeavour;
-  border: 1px solid $color-transparent;
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-.accordion__button-inner:disabled {
-  background-color: $color-disabled;
-  border: 1px solid $color-transparent;
-}
-
-.accordion__button-inner:hover::before,
-.accordion__button-inner:hover::after,
-.accordion__button-inner:focus::before,
-.accordion__button-inner:focus::after {
-  background: $color-cerulean-blue;
-}
-
-.accordion__button-inner:active::before,
-.accordion__button-inner:active::after {
-  background: $color-default-white;
-}
-
-.accordion__button-inner:disabled::before,
-.accordion__button-inner:disabled::after {
-  background: $color-default-white;
-}
-
-.accordion__button-inner::before,
-.accordion__button-inner::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 18px;
-
-  background-color: $color-default-white;
-  cursor: pointer;
-}
-
-.accordion__button-inner::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.accordion__element.is-active .accordion__button-inner {
-  background-color: $color-default-white;
-  border: 1px solid $color-cerulean-blue;
-  transform: rotate(90deg);
-  top: 20%;
-  right: 40px;
-  cursor: pointer;
-
-  @include vp-1199 {
-    top: 15%;
-    right: 30px;
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
   }
 
-  @include vp-767 {
-    top: 8%;
-    right: 15px;
+  &::before {
+    width: 1px;
+    height: 18px;
   }
-}
 
-.accordion__element.is-active .accordion__button-inner:hover,
-.accordion__element.is-active .accordion__button-inner:focus {
-  background-color: $color-transparent;
-  border: 1px solid $color-default-white;
-}
-
-.accordion__element.is-active .accordion__button-inner::before,
-.accordion__element.is-active .accordion__button-inner::after {
-  background: $color-cerulean-blue;
-}
-
-.accordion__element.is-active .accordion__button-inner:hover::before,
-.accordion__element.is-active .accordion__button-inner:focus::before {
-  background: $color-default-white;
-}
-
-.accordion__element.is-active .accordion__button-inner:active::before {
-  background: $color-endeavour;
-
-  & .accordion__element {
-    background: $color-endeavour;
+  &::after {
+    width: 18px;
+    height: 1px;
   }
-}
-
-.accordion__element.is-active .accordion__button-inner::after {
-  display: none;
 }

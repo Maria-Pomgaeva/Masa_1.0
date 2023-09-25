@@ -11,6 +11,14 @@
 }
 
 .reviews__container {
+  @include vp-1199 {
+    padding: 0 0 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+
   & h2 {
     font-size: 50px;
     font-weight: 400;
@@ -52,7 +60,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 50px 50px 40px;
+  padding: 50px 50px 43px;
 
   width: 100%;
   height: 100%;
@@ -76,9 +84,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 87px;
 
   @include vp-1199 {
-    gap: 32px;
+    gap: 45px;
     justify-content: flex-start;
   }
 
@@ -131,8 +140,9 @@
 
 .reviews__detalis {
   display: grid;
-  grid-template-columns: 126px auto;
-  gap: 25px;
+  justify-content: start;
+  grid-template-columns: auto auto;
+  gap: 27px;
 
   margin: 0;
 

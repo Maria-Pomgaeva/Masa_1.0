@@ -6,6 +6,10 @@
 
   width: 100%;
 
+  @include vp-1199 {
+    gap: 7px;
+  }
+
   &__label {
     display: block;
     order: -1;
@@ -137,17 +141,17 @@
     @include hover-focus {
       color: $color-default-white;
 
-      background-color: $color-endeavour;
+      background-color: $color-cerulean-blue;
     }
 
     &[aria-selected="true"] {
       color: $color-default-white;
-      background-color: $color-endeavour;
+      background-color: $color-cerulean-blue;
 
       @include hover-focus {
         &:hover:not(.focus-visible) {
           color: $color-default-white;
-          background-color: $color-endeavour;
+          background-color: $color-cerulean-blue;
         }
       }
     }
