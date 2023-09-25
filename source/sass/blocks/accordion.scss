@@ -36,6 +36,18 @@
   background-color: $color-cerulean-blue;
 }
 
+.accordion__element.is-active {
+  & .accordion__title {
+    @include vp-1199 {
+      margin-bottom: 5px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .accordion__title {
   padding: 43px 40px 41px;
 
@@ -115,7 +127,7 @@
   margin-top: -33px;
 
   @include vp-1199 {
-    padding: 8px 29px 26px;
+    padding: 9px 29px 26px;
   }
 
   @include vp-767 {

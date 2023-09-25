@@ -5384,6 +5384,10 @@ button,
     margin-bottom: 12px;
   }
 
+  .accordion__element.is-active .accordion__title {
+    margin-bottom: 5px;
+  }
+
   .accordion__title {
     min-height: 98px;
     padding: 10px 176px 10px 30px;
@@ -5396,7 +5400,7 @@ button,
   }
 
   .accordion__text {
-    padding: 8px 29px 26px;
+    padding: 9px 29px 26px;
   }
 
   .accordion__text p {
@@ -5414,7 +5418,7 @@ button,
   }
 
   .reviews {
-    padding: 89px 0 100px;
+    padding: 86px 0 98px;
   }
 
   .reviews__container h2 {
@@ -6082,6 +6086,10 @@ button,
 
   .accordion__element {
     margin-bottom: 9px;
+  }
+
+  .accordion__element.is-active .accordion__title {
+    margin-bottom: 0;
   }
 
   .accordion__title {
