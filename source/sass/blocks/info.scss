@@ -107,7 +107,7 @@
   border-radius: 38px;
   background-color: $color-endeavour;
 
-  @include vp-767 {
+  @include vp-1199 {
     border-radius: 16px;
   }
 }

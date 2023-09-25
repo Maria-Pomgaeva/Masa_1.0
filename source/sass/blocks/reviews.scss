@@ -131,13 +131,12 @@
 
 .reviews__detalis {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 126px auto;
   gap: 25px;
 
   margin: 0;
 
   @include vp-1199 {
-    grid-template-columns: 126px auto;
     gap: 38px;
     margin-top: 3px;
     justify-items: end;
