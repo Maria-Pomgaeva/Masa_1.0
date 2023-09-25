@@ -15,7 +15,7 @@
     appearance: none;
 
     &:checked {
-      background-color: $color-default-white;
+      background-color: $color-cerulean-blue;
       opacity: 1;
 
       &::after {
@@ -37,7 +37,6 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 10px;
-    // padding-top: 6px;
 
     font-size: 12px;
     line-height: 12px;
@@ -52,6 +51,106 @@
 
     span {
       margin-top: 3px;
+    }
+  }
+
+  &--checkbox {
+    label {
+      @include hover {
+        input {
+          background-color: transparent;
+          outline: none;
+          opacity: 1;
+        }
+
+        &:checked::after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+
+    input {
+      @include hover-focus {
+        background-color: transparent;
+        outline: none;
+        opacity: 1;
+
+        &:checked::after {
+          background-color: $color-charcoal;
+        }
+      }
+    }
+
+    input::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 10px;
+      height: 8px;
+
+      background-color: $color-charcoal;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      opacity: 0;
+
+      mask-image: url("../../img/sprite.svg#icon-check");
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+
+    &.is-disabled {
+      pointer-events: none;
+
+      input {
+        background-color: #a9afb7;
+      }
+
+      input::after {
+        opacity: 0.7;
+      }
+    }
+
+    &.is-invalid {
+      @include hover-focus {
+        input {
+          background-color: rgba(#ff5e66, 0.2);
+          border-color: #ff5e66;
+          opacity: 0.7;
+        }
+      }
+
+      input {
+        background-color: rgba(#ff5e66, 0.2);
+        border-color: #ff5e66;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.custom-toggle--light {
+  input {
+    border: 1px solid $color-default-white;
+    opacity: 0.7;
+
+    &:checked {
+      background-color: $color-default-white;
+      opacity: 1;
+
+      &::after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  label {
+    color: rgba($color-default-white, 0.9);
+
+    @include vp-1199 {
+      margin-top: -8px;
     }
   }
 
@@ -99,65 +198,6 @@
       mask-image: url("../../img/sprite.svg#icon-check");
       mask-position: center;
       mask-repeat: no-repeat;
-    }
-
-    &.is-disabled {
-      pointer-events: none;
-
-      input {
-        background-color: #a9afb7;
-      }
-
-      input::after {
-        opacity: 0.7;
-      }
-    }
-
-    &.is-invalid {
-      @include hover-focus {
-        input {
-          background-color: rgba(#ff5e66, 0.2);
-          border-color: #ff5e66;
-          opacity: 0.7;
-        }
-      }
-
-      input {
-        background-color: rgba(#ff5e66, 0.2);
-        border-color: #ff5e66;
-        opacity: 0.7;
-      }
-    }
-  }
-}
-
-.custom-toggle--light {
-  input {
-    border: 1px solid $color-default-white;
-    opacity: 0.7;
-  }
-
-  label {
-    color: rgba($color-default-white, 0.9);
-
-    @include vp-1199 {
-      margin-top: -8px;
-    }
-  }
-
-  &--checkbox {
-    label {
-      @include hover {
-        input {
-          background-color: transparent;
-          outline: none;
-          opacity: 1;
-        }
-
-        &:checked::after {
-          background-color: $color-default-white;
-        }
-      }
     }
   }
 }

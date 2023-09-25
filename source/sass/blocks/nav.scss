@@ -29,7 +29,7 @@
   width: 286px;
   height: 0;
   margin-top: 4px;
-  padding: 34px 25px;
+  padding: 18px 10px;
 
   color: $color-default-white;
 
@@ -37,10 +37,6 @@
   border-radius: 16px;
   visibility: hidden;
   opacity: 0;
-
-  @include vp-767 {
-    padding: 35px 20px;
-  }
 }
 
 .header.is-open .nav__wrapper {
@@ -49,24 +45,42 @@
   opacity: 1;
 }
 
-.nav__container {
-  max-height: 100dvh;
-  overflow: auto;
-}
+// .nav__container {
+//   max-height: 100dvh;
+//   overflow: auto;
+// }
 
 .nav__menu {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
-  color: $color-default-white;
   z-index: 100;
 
-  margin-top: -3px;
+  display: flex;
+  gap: 23px;
+  flex-direction: column;
 
-  @include vp-767 {
-    overflow-y: auto;
-    white-space: nowrap;
+  height: 100%;
+  max-height: 80vh;
+  padding: 15px;
+  overflow: auto;
+
+  color: $color-default-white;
+
+  scrollbar-color: #ffffff #3467b0;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #3467b0;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border: 2px solid #3467b0;
+    border-radius: 20px;
   }
 }
 
@@ -96,7 +110,6 @@
   &:focus {
     opacity: 1;
     outline: none;
-    outline: none;
   }
 }
 
@@ -108,7 +121,6 @@
   padding: 0;
 
   color: $color-default-white;
-  opacity: 0.7;
   text-transform: uppercase;
 
   background-color: $color-transparent;

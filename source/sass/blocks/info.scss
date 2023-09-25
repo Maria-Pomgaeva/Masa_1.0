@@ -104,12 +104,8 @@
 
 .info__image img {
   width: 100%;
-  border-radius: 38px;
+  border-radius: 16px;
   background-color: $color-endeavour;
-
-  @include vp-1199 {
-    border-radius: 16px;
-  }
 }
 
 .info__list {

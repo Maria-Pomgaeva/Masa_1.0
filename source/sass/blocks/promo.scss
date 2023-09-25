@@ -33,6 +33,14 @@
 
 .promo__swiper-content {
   padding-top: 20px;
+
+  @include vp-1199 {
+    padding-top: 43px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
 }
 
 .promo__pagination.swiper-pagination {
@@ -54,7 +62,12 @@
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
 
+  @include vp-1199 {
+    top: 4px;
+  }
+
   @include vp-767 {
+    top: 0;
     padding: 10px 16px;
     margin-top: 49px;
   }
@@ -136,8 +149,8 @@
 
   @include vp-1199 {
     max-width: 97%;
-    padding: 30px 20px 20px 40px;
-    margin-top: 17px;
+    padding: 25px 20px 26px 40px;
+    margin-top: 0px;
   }
 
   @include vp-767 {

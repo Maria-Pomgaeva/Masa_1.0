@@ -10,6 +10,10 @@
     gap: 7px;
   }
 
+  @include vp-767 {
+    gap: 11px;
+  }
+
   &__label {
     display: block;
     order: -1;

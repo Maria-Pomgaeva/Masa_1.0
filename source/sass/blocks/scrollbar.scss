@@ -30,6 +30,10 @@
   & .swiper-scrollbar-drag {
     background-color: $color-cerulean-blue;
   }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .scrollbar__navigation {

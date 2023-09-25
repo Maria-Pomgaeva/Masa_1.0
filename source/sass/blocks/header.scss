@@ -18,7 +18,6 @@
 }
 
 .header__toggle {
-  position: relative;
   width: 134px;
   padding: 20px 70px 20px 20px;
   margin-left: auto;
@@ -27,20 +26,24 @@
   background-color: $color-default-white;
 
   color: $color-cerulean-blue;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 0.28px;
-  text-transform: uppercase;
+  text-align: left;
+  // font-size: 14px;
+  // font-weight: 500;
+  // line-height: 14px;
+  // letter-spacing: 0.28px;
+  // text-transform: uppercase;
 }
 
 .header.is-open .header__toggle {
+  z-index: 20;
+
   width: 286px;
   padding: 20px 222px 20px 20px;
-  border-color: $color-transparent;
+
   color: $color-default-white;
+
   background-color: $color-cerulean-blue;
-  z-index: 20;
+  border-color: $color-transparent;
 
   @include vp-767 {
     padding: 20px 225px 20px 14px;
@@ -48,21 +51,19 @@
 }
 
 .header__toggle-range {
-  background-color: $color-cerulean-blue;
-
   @include vp-767 {
     width: 46px;
     height: 46px;
   }
 }
 
-.header__toggle.btn {
-  padding: 20px 70px 20px 20px;
-}
+// .header__toggle.btn {
+//   padding: 20px 70px 20px 20px;
+// }
 
-.header.is-open .header__toggle-range {
-  background-color: $color-default-white;
-}
+// .header.is-open .header__toggle-range {
+//   background-color: $color-default-white;
+// }
 
 // Бургер
 
@@ -103,7 +104,16 @@
   }
 }
 
+.header__toggle:hover .header__toggle-icon,
+.header__toggle:focus .header__toggle-icon {
+  color: $color-cerulean-blue;
+}
+
 // Крестик
+
+.header.is-open .header__toggle-range {
+  background-color: $color-default-white;
+}
 
 .header.is-open .header__toggle-icon {
   &::after,

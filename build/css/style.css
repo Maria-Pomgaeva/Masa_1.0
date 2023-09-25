@@ -2463,39 +2463,22 @@ button,
 }
 
 .header__toggle {
-  position: relative;
   width: 134px;
   padding: 20px 70px 20px 20px;
   margin-left: auto;
   border: 1px solid #316dc2;
   background-color: #ffffff;
   color: #316dc2;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 0.28px;
-  text-transform: uppercase;
+  text-align: left;
 }
 
 .header.is-open .header__toggle {
+  z-index: 20;
   width: 286px;
   padding: 20px 222px 20px 20px;
-  border-color: rgba(255, 255, 255, 0);
   color: #ffffff;
   background-color: #316dc2;
-  z-index: 20;
-}
-
-.header__toggle-range {
-  background-color: #316dc2;
-}
-
-.header__toggle.btn {
-  padding: 20px 70px 20px 20px;
-}
-
-.header.is-open .header__toggle-range {
-  background-color: #ffffff;
+  border-color: rgba(255, 255, 255, 0);
 }
 
 .header__toggle-icon {
@@ -2533,6 +2516,15 @@ button,
 
 .header__toggle-icon::after {
   bottom: 4px;
+}
+
+.header__toggle:hover .header__toggle-icon,
+.header__toggle:focus .header__toggle-icon {
+  color: #316dc2;
+}
+
+.header.is-open .header__toggle-range {
+  background-color: #ffffff;
 }
 
 .header.is-open .header__toggle-icon::after,
@@ -2583,7 +2575,7 @@ button,
   width: 286px;
   height: 0;
   margin-top: 4px;
-  padding: 34px 25px;
+  padding: 18px 10px;
   color: #ffffff;
   background-color: #316dc2;
   border-radius: 16px;
@@ -2597,24 +2589,39 @@ button,
   opacity: 1;
 }
 
-.nav__container {
-  max-height: 100dvh;
-  overflow: auto;
-}
-
 .nav__menu {
   position: relative;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 23px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 23px;
+  height: 100%;
+  max-height: 80vh;
+  padding: 15px;
+  overflow: auto;
   color: #ffffff;
-  z-index: 100;
-  margin-top: -3px;
+  scrollbar-color: #ffffff #3467b0;
+  scrollbar-width: thin;
+}
+
+.nav__menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.nav__menu::-webkit-scrollbar-track {
+  background-color: #3467b0;
+  border-radius: 20px;
+}
+
+.nav__menu::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border: 2px solid #3467b0;
+  border-radius: 20px;
 }
 
 .nav__item {
@@ -2642,7 +2649,6 @@ button,
 .nav__link:focus {
   opacity: 1;
   outline: none;
-  outline: none;
 }
 
 .nav__link-button {
@@ -2656,7 +2662,6 @@ button,
   align-items: center;
   padding: 0;
   color: #ffffff;
-  opacity: 0.7;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0);
   border: none;
@@ -3709,7 +3714,7 @@ button,
 }
 
 .custom-toggle input:checked {
-  background-color: #ffffff;
+  background-color: #316dc2;
   opacity: 1;
 }
 
@@ -3750,7 +3755,7 @@ button,
 }
 
 .custom-toggle--checkbox input.focus-visible:focus:checked::after {
-  background-color: #ffffff;
+  background-color: #484848;
 }
 
 .custom-toggle--checkbox input::after {
@@ -3760,7 +3765,7 @@ button,
   left: 50%;
   width: 10px;
   height: 8px;
-  background-color: #316dc2;
+  background-color: #484848;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -3803,8 +3808,49 @@ button,
   opacity: 0.7;
 }
 
+.custom-toggle--light input:checked {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.custom-toggle--light input:checked::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 .custom-toggle--light label {
   color: rgba(255, 255, 255, 0.9);
+}
+
+.custom-toggle--light--checkbox input.focus-visible:focus {
+  background-color: transparent;
+  outline: none;
+  opacity: 1;
+}
+
+.custom-toggle--light--checkbox input.focus-visible:focus:checked::after {
+  background-color: #ffffff;
+}
+
+.custom-toggle--light--checkbox input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 8px;
+  background-color: #316dc2;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-mask-image: url("../../img/sprite.svg#icon-check");
+  mask-image: url("../../img/sprite.svg#icon-check");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .scrollbar {
@@ -4131,7 +4177,7 @@ button,
 
 .info__image img {
   width: 100%;
-  border-radius: 38px;
+  border-radius: 16px;
   background-color: #275699;
 }
 
@@ -4614,7 +4660,7 @@ button,
 }
 
 .reviews {
-  padding: 120px 0 124px;
+  padding: 120px 0 119px;
 }
 
 .reviews__container h2 {
@@ -5075,14 +5121,22 @@ button,
 }
 
 @media (max-width: 1199px) {
+  .promo__swiper-content {
+    padding-top: 43px;
+  }
+
+  .promo__pagination.swiper-pagination {
+    top: 4px;
+  }
+
   .promo__container-content {
     min-height: 1024px;
   }
 
   .promo__text-header {
     max-width: 97%;
-    padding: 30px 20px 20px 40px;
-    margin-top: 17px;
+    padding: 25px 20px 26px 40px;
+    margin-top: 0px;
   }
 
   .promo__text-header h2 {
@@ -5278,10 +5332,6 @@ button,
     max-width: 530px;
   }
 
-  .info__image img {
-    border-radius: 16px;
-  }
-
   .info__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -5390,7 +5440,7 @@ button,
   }
 
   .reviews {
-    padding: 86px 0 98px;
+    padding: 88px 0 98px;
   }
 
   .reviews__container {
@@ -5443,6 +5493,10 @@ button,
 
   .reviews__text p {
     line-height: 20px;
+  }
+
+  .reviews__scrollbar {
+    padding: 0 45px 0 0;
   }
 
   .contacts {
@@ -5573,16 +5627,12 @@ button,
     height: 46px;
   }
 
-  .nav__wrapper {
-    padding: 35px 20px;
-  }
-
-  .nav__menu {
-    overflow-y: auto;
-    white-space: nowrap;
+  .promo__swiper-content {
+    padding-top: 20px;
   }
 
   .promo__pagination.swiper-pagination {
+    top: 0;
     padding: 10px 16px;
     margin-top: 49px;
   }
@@ -5778,7 +5828,7 @@ button,
   }
 
   .form__toggle {
-    margin-top: 2px;
+    margin-top: 5px;
   }
 
   .form__toggle--modal {
@@ -5800,6 +5850,10 @@ button,
     min-height: 94px;
   }
 
+  .custom-select {
+    gap: 11px;
+  }
+
   .custom-select__label {
     font-size: 14px;
     line-height: 14px;
@@ -5812,6 +5866,10 @@ button,
   .custom-toggle label {
     padding-top: 0;
     line-height: 14px;
+  }
+
+  .scrollbar__bar {
+    display: none;
   }
 
   .scrollbar__pagination-btn {
@@ -5989,7 +6047,7 @@ button,
 
   .news__slide--big .news__text {
     max-width: 91%;
-    padding: 5px 10px 0px 0px;
+    padding: 12px 10px 10px 0;
   }
 
   .news__time::before {
@@ -6009,7 +6067,7 @@ button,
   }
 
   .news__text-header {
-    padding: 9px 8px 0px 1px;
+    padding: 12px 8px 3px 1px;
     max-width: 69.3%;
   }
 
@@ -6028,7 +6086,7 @@ button,
 
   .news__text {
     max-width: 91%;
-    padding: 0px 10px 0px 1px;
+    padding: 14px 10px 9px 1px;
   }
 
   .news__text p {
@@ -6084,7 +6142,7 @@ button,
   }
 
   .reviews {
-    padding: 59px 0 13px;
+    padding: 59px 0 34px;
   }
 
   .reviews__container {
@@ -6159,8 +6217,27 @@ button,
     min-width: 260px;
   }
 
+  .reviews__swiper {
+    padding-top: 75px;
+    margin-top: -75px;
+  }
+
+  .reviews__navigation {
+    position: absolute;
+    top: -522px;
+    right: 0;
+  }
+
+  .reviews__scrollbar {
+    padding: 0;
+  }
+
+  .reviews__bar {
+    display: none;
+  }
+
   .contacts {
-    padding: 64px 0 66px;
+    padding: 65px 0 67px;
   }
 
   .contacts__wrapper {
@@ -6196,7 +6273,7 @@ button,
   }
 
   .feedback__form {
-    padding: 53px 15px 52px;
+    padding: 53px 15px 50px;
   }
 
   .feedback__form h2 {
@@ -6314,7 +6391,7 @@ button,
   }
 
   .custom-toggle--checkbox input:hover:not(.focus-visible):checked::after {
-    background-color: #ffffff;
+    background-color: #484848;
   }
 
   .custom-toggle--checkbox.is-invalid:hover:not(.focus-visible) input {
@@ -6330,6 +6407,16 @@ button,
   }
 
   .custom-toggle--light--checkbox label:hover:not(.focus-visible):checked::after {
+    background-color: #ffffff;
+  }
+
+  .custom-toggle--light--checkbox input:hover:not(.focus-visible) {
+    background-color: transparent;
+    outline: none;
+    opacity: 1;
+  }
+
+  .custom-toggle--light--checkbox input:hover:not(.focus-visible):checked::after {
     background-color: #ffffff;
   }
 }
