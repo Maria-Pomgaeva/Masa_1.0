@@ -2776,7 +2776,7 @@ button,
 }
 
 .promo__swiper-content {
-  padding-top: 20px;
+  padding-top: 19px;
 }
 
 .promo__pagination.swiper-pagination {
@@ -2960,7 +2960,7 @@ button,
 }
 
 .about__text-adv {
-  padding: 70px 106px 56px 106px;
+  padding: 70px 106px 55px;
   background-color: #316dc2;
   border-radius: 20px;
   grid-column: 1/-1;
@@ -3198,7 +3198,7 @@ button,
 }
 
 .form__input--modal-checkbox {
-  margin-top: 0;
+  margin-top: -7px;
 }
 
 .custom-input,
@@ -3366,6 +3366,10 @@ button,
 .custom-input--light label,
 .custom-textarea--light label {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-input--modal input {
+  min-height: 43px;
 }
 
 .custom-select {
@@ -4073,8 +4077,8 @@ button,
 .program__text-header {
   position: relative;
   max-width: 194px;
-  margin-bottom: -2px;
-  padding: 14px 15px 1px;
+  margin-bottom: -1px;
+  padding: 16px 15px 1px;
   background-color: #ffffff;
   border-radius: 12px 12px 0 0;
 }
@@ -4090,7 +4094,7 @@ button,
 .program__text-header::after {
   position: absolute;
   content: "";
-  top: 14px;
+  top: 17px;
   right: -25px;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -4404,7 +4408,7 @@ button,
   position: relative;
   margin: 0 0 -1px -1px;
   padding: 5px 1px 1px 1px;
-  max-width: 76.8%;
+  max-width: 75.8%;
   background-color: #f0efe9;
   border-radius: 0 12px 0 0;
 }
@@ -5122,7 +5126,7 @@ button,
 
 @media (max-width: 1199px) {
   .promo__swiper-content {
-    padding-top: 43px;
+    padding-top: 44px;
   }
 
   .promo__pagination.swiper-pagination {
@@ -5135,7 +5139,7 @@ button,
 
   .promo__text-header {
     max-width: 97%;
-    padding: 25px 20px 26px 40px;
+    padding: 28px 20px 29px 40px;
     margin-top: 0px;
   }
 
@@ -5267,11 +5271,11 @@ button,
   }
 
   .program {
-    padding: 100px 0;
+    padding: 98px 0;
   }
 
   .program__head {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
 
   .program__head h2 {
@@ -5405,7 +5409,7 @@ button,
   }
 
   .questions__container {
-    gap: 38px;
+    gap: 40px;
   }
 
   .questions__container h2 {
@@ -5538,7 +5542,7 @@ button,
 
   .feedback__form {
     max-width: 442px;
-    padding: 60px 45px 55px;
+    padding: 60px 45px 58px;
   }
 
   .feedback__form h2 {
@@ -5625,6 +5629,10 @@ button,
   .header__toggle-range {
     width: 46px;
     height: 46px;
+  }
+
+  .nav__menu {
+    padding: 15px 11px;
   }
 
   .promo__swiper-content {
@@ -5793,13 +5801,20 @@ button,
     padding: 60px 16px;
   }
 
+  .modal__close-btn {
+    top: 19px;
+    right: 26px;
+    width: 10px;
+    height: 10px;
+  }
+
   .modal--fit-content .modal__content {
     width: 100%;
   }
 
   .modal__content {
     width: 100%;
-    padding: 40px 15px;
+    padding: 38px 15px;
   }
 
   .modal__content h2 {
@@ -5823,7 +5838,7 @@ button,
   }
 
   .form__btn--modal {
-    width: 100%;
+    max-width: 100%;
     padding: 14px 39px 14px 78px;
   }
 
@@ -6111,7 +6126,7 @@ button,
   }
 
   .questions__container {
-    gap: 33px;
+    gap: 35px;
   }
 
   .questions__container h2 {
@@ -6172,7 +6187,7 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    gap: 15px;
+    gap: 14px;
   }
 
   .reviews__person {
@@ -6197,6 +6212,10 @@ button,
     justify-items: start;
     gap: 24px;
     margin: 0;
+  }
+
+  .reviews__item dt {
+    margin-bottom: 5px;
   }
 
   .reviews__item dd {
@@ -6273,7 +6292,7 @@ button,
   }
 
   .feedback__form {
-    padding: 53px 15px 50px;
+    padding: 53px 15px 48px;
   }
 
   .feedback__form h2 {

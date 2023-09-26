@@ -68,6 +68,10 @@
   scrollbar-color: #ffffff #3467b0;
   scrollbar-width: thin;
 
+  @include vp-767 {
+    padding: 15px 11px;
+  }
+
   &::-webkit-scrollbar {
     width: 10px;
   }

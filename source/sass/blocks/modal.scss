@@ -70,6 +70,13 @@
     border: none;
     cursor: pointer;
 
+    @include vp-767 {
+      top: 19px;
+      right: 26px;
+      width: 10px;
+      height: 10px;
+    }
+
     &:hover,
     &:focus {
       outline: none;
@@ -123,7 +130,7 @@
 
   @include vp-767 {
     width: 100%;
-    padding: 40px 15px;
+    padding: 38px 15px;
   }
 
   & h2 {

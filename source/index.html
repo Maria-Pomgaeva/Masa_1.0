@@ -1072,7 +1072,7 @@
         <div class="modal__content">
           <h2>Напишите нам</h2>
           <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal="data-close-modal">
             <svg width="18" height="18">
               <use xlink:href="img/sprite.svg#cross-btn"></use>
             </svg>
@@ -1080,11 +1080,11 @@
           <div class="form" data-form-validate data-callback="base">
             <form method="post" action="https://echo.htmlacademy.ru">
               <div class="form__wrapper form__wrapper--modal">
-                <div class="form__input form__input--modal custom-input" data-validate-type="text" data-limitation="name" data-required="">
+                <div class="form__input form__input--modal custom-input custom-input--modal" data-validate-type="text" data-limitation="name" data-required="">
                   <label for="modal-name">Имя</label>
-                  <input type="text" id="modal-name" name="user-name" required autofocus="">
+                  <input type="text" id="modal-name" name="user-name" required data-focus="data-focus">
                 </div>
-                <div class="form__input form__input--modal custom-input" data-validate-type="phone" data-on-input-validate="" data-required="">
+                <div class="form__input form__input--modal custom-input custom-input--modal" data-validate-type="phone" data-on-input-validate="" data-required="">
                   <label for="modal-phone">Телефон</label>
                   <input type="tel" id="modal-phone" name="phone" required autocomplete="off">
                 </div>

@@ -164,10 +164,14 @@ export class Modals {
       this._focusLock.lock('.modal.is-active', this._startFocus);
     }
 
+    const focusedElement = modal.querySelector('[data-focus]');
     setTimeout(() => {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      if (focusedElement) {
+        focusedElement.focus();
+      }
     }, this._eventTimeout);
   }
 
