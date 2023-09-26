@@ -98,6 +98,8 @@
   border: none;
   border-radius: 16px;
 
+  cursor: pointer;
+
   @include vp-1199 {
     min-height: 98px;
     padding: 24px 100px 24px 30px;

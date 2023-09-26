@@ -2481,6 +2481,10 @@ button,
   border-color: rgba(255, 255, 255, 0);
 }
 
+.header__toggle.btn {
+  padding: 20px 70px 20px 20px;
+}
+
 .header__toggle-icon {
   content: "";
   position: absolute;
@@ -2781,7 +2785,7 @@ button,
 
 .promo__pagination.swiper-pagination {
   position: absolute;
-  top: 0;
+  top: 6px;
   bottom: auto;
   left: 0;
   z-index: 1;
@@ -2859,8 +2863,8 @@ button,
 .promo__text-header {
   background-color: #ffffff;
   max-width: 968px;
-  margin-top: 20px;
-  padding: 42px 50px 27px;
+  margin-top: 27px;
+  padding: 46px 50px 26px;
   border-radius: 0 30px 30px 0;
 }
 
@@ -2888,8 +2892,8 @@ button,
   min-height: 105px;
   margin-top: -2px;
   background-color: #ffffff;
-  border-radius: 0 0 30px 30px;
-  padding: 0 50px 25px 50px;
+  border-radius: 0 0 40px 40px;
+  padding: 0 50px 27px 50px;
 }
 
 .promo__text-bottom p {
@@ -3368,10 +3372,6 @@ button,
   color: rgba(255, 255, 255, 0.8);
 }
 
-.custom-input--modal input {
-  min-height: 43px;
-}
-
 .custom-select {
   position: relative;
   display: -webkit-box;
@@ -3498,6 +3498,11 @@ button,
 }
 
 .custom-select__item.focus-visible:focus {
+  color: #316dc2;
+  background-color: #ffffff;
+}
+
+.custom-select__item:active {
   color: #ffffff;
   background-color: #316dc2;
 }
@@ -3715,6 +3720,7 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .custom-toggle input:checked {
@@ -4604,6 +4610,7 @@ button,
   background-color: rgba(255, 255, 255, 0);
   border: none;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .accordion__title h3 {
@@ -5234,6 +5241,7 @@ button,
   .modal__content h2 {
     font-size: 28px;
     line-height: 28px;
+    margin: 0 0 16px;
   }
 
   .modal__content p {
@@ -5246,6 +5254,10 @@ button,
 
   .form__toggle {
     margin-top: 11px;
+  }
+
+  .form__input--modal-checkbox {
+    margin-top: 7px;
   }
 
   .custom-input,
@@ -5820,6 +5832,7 @@ button,
   .modal__content h2 {
     font-size: 18px;
     line-height: 18px;
+    margin: 0 0 7px;
   }
 
   .modal__content p {
@@ -5854,6 +5867,10 @@ button,
     min-height: 43px;
   }
 
+  .form__input--modal-checkbox {
+    margin-top: -7px;
+  }
+
   .custom-input label,
   .custom-textarea label {
     font-size: 14px;
@@ -5863,6 +5880,10 @@ button,
   .custom-input textarea,
   .custom-textarea textarea {
     min-height: 94px;
+  }
+
+  .custom-input--modal input {
+    min-height: 43px;
   }
 
   .custom-select {
@@ -6031,7 +6052,8 @@ button,
   }
 
   .news__btn-contaner {
-    margin: 25px 0;
+    margin: 27px 0 26px;
+    gap: 12px;
     padding: 0;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
@@ -6043,11 +6065,17 @@ button,
   }
 
   .news__btn {
+    font-size: 12px;
+    line-height: 12px;
     padding: 7px 13px;
   }
 
   .news__wrapper {
     margin-bottom: 24px;
+  }
+
+  .news__scrollbar {
+    gap: 15px;
   }
 
   .news__slide {
@@ -6384,8 +6412,8 @@ button,
   }
 
   .custom-select__item:hover:not(.focus-visible) {
-    color: #ffffff;
-    background-color: #316dc2;
+    color: #316dc2;
+    background-color: #ffffff;
   }
 
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible):hover:not(.focus-visible) {

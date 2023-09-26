@@ -143,6 +143,12 @@
     transition: background-color $trans-default;
 
     @include hover-focus {
+      color: $color-cerulean-blue;
+
+      background-color: $color-default-white;
+    }
+
+    &:active {
       color: $color-default-white;
 
       background-color: $color-cerulean-blue;

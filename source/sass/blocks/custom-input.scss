@@ -158,7 +158,9 @@
 }
 
 .custom-input--modal {
-  input {
-    min-height: 43px;
+  @include vp-767 {
+    input {
+      min-height: 43px;
+    }
   }
 }
